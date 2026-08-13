@@ -1,0 +1,46 @@
+Topic: Kidney and Urinary Tract Diseases (أمراض الكلى والمسالك البولية)
+Category: Urology / Nephrology
+
+--- Urinary Tract Infection / UTI (التهاب المسالك البولية) ---
+Types: Lower (cystitis — bladder), Upper (pyelonephritis — kidney)
+Risk Factors: Female gender, sexual activity, pregnancy, diabetes, urinary catheter
+Symptoms:
+- Cystitis: Burning urination, frequency, urgency, lower abdominal pain, cloudy/bloody urine
+- Pyelonephritis: Fever, flank pain, nausea, vomiting + cystitis symptoms
+Diagnosis: Urinalysis, urine culture and sensitivity
+Treatment:
+- Uncomplicated cystitis: Nitrofurantoin 5 days, or Trimethoprim-Sulfamethoxazole 3 days
+- Pyelonephritis: Ciprofloxacin 7 days or IV antibiotics if severe
+- Increase water intake, urinate after intercourse (prevention)
+
+--- Kidney Stones (حصوات الكلى) ---
+Types: Calcium oxalate (most common), Uric acid, Struvite, Cystine
+Symptoms: Severe flank pain (renal colic), radiating to groin, hematuria, nausea, vomiting
+Diagnosis: Non-contrast CT scan (gold standard), Ultrasound, Urinalysis
+Treatment:
+- < 5 mm: Likely to pass spontaneously. Hydration, NSAIDs, Tamsulosin (Alpha-blocker)
+- 5-10 mm: May need intervention
+- > 10 mm or obstructing: ESWL (Extracorporeal Shock Wave Lithotripsy), Ureteroscopy, PCNL
+Prevention: Drink 2-3 liters water/day, reduce sodium and animal protein, limit oxalate-rich foods
+
+--- Chronic Kidney Disease / CKD (مرض الكلى المزمن) ---
+Definition: Progressive loss of kidney function over months/years
+Stages (by GFR):
+- Stage 1: GFR >= 90 (normal kidney function but other evidence of damage)
+- Stage 2: GFR 60-89 (mild decrease)
+- Stage 3: GFR 30-59 (moderate decrease)
+- Stage 4: GFR 15-29 (severe decrease)
+- Stage 5: GFR < 15 (kidney failure — dialysis or transplant needed)
+Causes: Diabetes (most common), Hypertension, Glomerulonephritis
+Treatment: Control diabetes and BP, ACE inhibitors/ARBs, low-protein diet, avoid nephrotoxic drugs
+Dialysis: Hemodialysis or Peritoneal dialysis when GFR < 10-15
+
+--- Benign Prostatic Hyperplasia / BPH (تضخم البروستاتا) ---
+Common in men > 50 years
+Symptoms: Weak urine stream, frequency, urgency, nocturia, incomplete emptying, hesitancy
+Diagnosis: Digital rectal exam, PSA blood test, Ultrasound, Uroflowmetry
+Treatment:
+- Mild: Watchful waiting, lifestyle changes
+- Alpha-blockers: Tamsulosin, Alfuzosin (relax prostate muscles)
+- 5-alpha reductase inhibitors: Finasteride, Dutasteride (shrink prostate)
+- Surgery: TURP (transurethral resection) for severe cases

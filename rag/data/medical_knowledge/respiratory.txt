@@ -1,0 +1,47 @@
+Topic: Common Respiratory Diseases (أمراض الجهاز التنفسي)
+Category: Pulmonology
+
+--- Common Cold (نزلة البرد) ---
+Cause: Viral infection (rhinovirus most common)
+Symptoms: Runny nose, sneezing, sore throat, mild cough, low-grade fever
+Treatment: Rest, fluids, Paracetamol for fever, decongestants, usually resolves in 7-10 days
+Note: Antibiotics are NOT effective against viral infections
+
+--- Influenza / Flu (الإنفلونزا) ---
+Cause: Influenza virus (A, B, C)
+Symptoms: High fever, body aches, severe fatigue, headache, dry cough, sore throat
+Treatment: Oseltamivir (Tamiflu) within 48 hours of symptoms, rest, fluids, Paracetamol
+Prevention: Annual flu vaccine
+Complications: Pneumonia, myocarditis, especially dangerous for elderly and immunocompromised
+
+--- Asthma (الربو) ---
+Definition: Chronic inflammatory disease of the airways causing reversible airflow obstruction
+Triggers: Allergens, cold air, exercise, smoke, stress, respiratory infections
+Symptoms: Wheezing, shortness of breath, chest tightness, cough (especially at night)
+Treatment:
+- Reliever: Salbutamol (Ventolin) inhaler — for acute attacks
+- Controller: Inhaled corticosteroids (Fluticasone, Budesonide) — daily prevention
+- Severe: Add long-acting beta-agonists (Salmeterol), Montelukast
+- Emergency: Nebulizer, systemic steroids, oxygen
+
+--- Pneumonia (الالتهاب الرئوي) ---
+Definition: Infection that inflames air sacs in one or both lungs
+Causes: Bacteria (Streptococcus pneumoniae most common), viruses, fungi
+Symptoms: Productive cough, fever, chills, shortness of breath, chest pain when breathing
+Diagnosis: Chest X-ray, CBC, sputum culture
+Treatment:
+- Bacterial: Amoxicillin, Azithromycin, or Levofloxacin
+- Viral: Supportive care, antivirals if influenza-related
+- Severe: Hospitalization, IV antibiotics, oxygen therapy
+
+--- Bronchitis (التهاب الشعب الهوائية) ---
+Acute: Usually viral, lasts 1-3 weeks. Treatment: rest, fluids, cough suppressants
+Chronic: Part of COPD. Productive cough for at least 3 months in 2 consecutive years
+Treatment: Bronchodilators, inhaled steroids, smoking cessation
+
+--- COVID-19 ---
+Cause: SARS-CoV-2 virus
+Symptoms: Fever, dry cough, fatigue, loss of taste/smell, shortness of breath
+Severity: Ranges from asymptomatic to severe pneumonia and ARDS
+Treatment: Supportive care, Paxlovid for high-risk patients, oxygen for severe cases
+Prevention: Vaccination, hand hygiene, masks in high-risk settings

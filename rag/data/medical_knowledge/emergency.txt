@@ -1,0 +1,63 @@
+Topic: Medical Emergencies and First Aid (الطوارئ الطبية والإسعافات الأولية)
+Category: Emergency Medicine
+
+--- Anaphylaxis (صدمة الحساسية) ---
+Causes: Food (peanuts, shellfish), insect stings, medications (penicillin), latex
+Symptoms: Swelling of face/throat, difficulty breathing, rapid pulse, drop in blood pressure, hives, dizziness
+EMERGENCY Treatment:
+1. Epinephrine (Adrenaline) IM injection — FIRST and most important step
+2. Call emergency services
+3. Lay patient flat, elevate legs
+4. Oxygen if available
+5. IV fluids, antihistamines, steroids (secondary)
+EpiPen: 0.3 mg adults, 0.15 mg children. Inject into outer thigh.
+
+--- Hypoglycemia (انخفاض السكر في الدم) ---
+Definition: Blood glucose < 70 mg/dL
+Causes: Excess insulin, missed meals, excessive exercise, alcohol
+Symptoms:
+- Mild: Shakiness, sweating, hunger, fast heartbeat, anxiety
+- Severe: Confusion, seizures, loss of consciousness
+Treatment:
+- Conscious: 15-20 g fast-acting sugar (juice, glucose tablets, candy), recheck in 15 min
+- Unconscious: Glucagon injection, IV dextrose. DO NOT give food/drink by mouth.
+- Rule of 15: 15g sugar → wait 15 min → recheck → repeat if still low
+
+--- Burns (الحروق) ---
+Degrees:
+- First degree: Red skin, pain, no blisters (sunburn). Treat: Cool water, aloe vera, Paracetamol
+- Second degree: Blisters, severe pain, red/mottled. Treat: Cool water 10-20 min, don't pop blisters, dress loosely
+- Third degree: White/charred, painless (nerve damage). EMERGENCY: Hospital, may need grafting
+General: Cool running water 10-20 min, remove jewelry, cover with clean non-stick dressing
+NEVER: Apply ice, butter, toothpaste. Don't remove stuck clothing.
+
+--- Choking (الاختناق) ---
+Adults: Abdominal thrusts (Heimlich maneuver) — stand behind, fist above navel, thrust upward
+Infants (< 1 year): 5 back blows + 5 chest thrusts, alternate until clear
+If unconscious: CPR, check mouth for object before giving breaths
+
+--- CPR (الإنعاش القلبي الرئوي) ---
+When: Person unresponsive and not breathing normally
+Steps:
+1. Call emergency services
+2. 30 chest compressions: Push hard and fast, center of chest, 5-6 cm depth, 100-120/min
+3. 2 rescue breaths (if trained)
+4. Continue 30:2 ratio until help arrives or AED available
+5. Use AED as soon as available — follow voice prompts
+Hands-only CPR: Acceptable if untrained — continuous chest compressions
+
+--- Fracture First Aid (إسعاف الكسور) ---
+Signs: Pain, swelling, deformity, inability to move, crepitus
+First Aid:
+- Immobilize the injury (splint in position found)
+- Apply ice wrapped in cloth
+- Elevate if possible
+- Don't try to realign the bone
+- Seek medical care
+Open fracture (bone visible): Cover with clean dressing, call emergency, don't push bone back
+
+--- Wound Care (العناية بالجروح) ---
+Minor cuts: Clean with water, apply pressure to stop bleeding, antiseptic, sterile dressing
+Deep wounds: Apply firm pressure, don't remove embedded objects, seek medical care
+When to get stitches: Deep cut, > 2 cm, won't stop bleeding, on face/joint, edges gaping
+Tetanus: Ensure vaccination is up to date for dirty/deep wounds

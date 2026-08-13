@@ -1,0 +1,50 @@
+Topic: Gastrointestinal Diseases (أمراض الجهاز الهضمي)
+Category: Gastroenterology
+
+--- GERD / Acid Reflux (ارتجاع المريء) ---
+Definition: Stomach acid frequently flows back into the esophagus
+Symptoms: Heartburn, regurgitation, chest pain, difficulty swallowing, chronic cough
+Treatment:
+- Lifestyle: Avoid spicy/fatty food, don't eat before bed, elevate head while sleeping
+- Antacids: Gaviscon, Maalox (quick relief)
+- H2 Blockers: Ranitidine, Famotidine
+- PPIs: Omeprazole, Esomeprazole, Pantoprazole (most effective)
+
+--- Peptic Ulcer Disease (قرحة المعدة) ---
+Causes: H. pylori infection (most common), NSAIDs overuse, stress
+Symptoms: Burning stomach pain, bloating, nausea, vomiting, dark stools (bleeding)
+Diagnosis: Upper GI endoscopy, H. pylori breath test or stool antigen test
+Treatment:
+- H. pylori triple therapy: PPI + Amoxicillin + Clarithromycin (14 days)
+- Stop NSAIDs
+- PPI for 4-8 weeks
+- Sucralfate for mucosal protection
+
+--- Irritable Bowel Syndrome / IBS (القولون العصبي) ---
+Definition: Functional GI disorder with no structural abnormality
+Symptoms: Abdominal pain, bloating, diarrhea and/or constipation, gas
+Diagnosis: Clinical diagnosis (Rome IV criteria), exclude other causes
+Treatment:
+- Diet: Low FODMAP diet, increase fiber gradually
+- Antispasmodics: Mebeverine, Hyoscine
+- For diarrhea: Loperamide
+- For constipation: Lactulose, Polyethylene glycol
+- Stress management, probiotics
+
+--- Gastroenteritis (نزلة معوية) ---
+Causes: Viral (Rotavirus, Norovirus), Bacterial (Salmonella, E. coli), Parasitic
+Symptoms: Diarrhea, vomiting, abdominal cramps, fever, dehydration
+Treatment:
+- Oral Rehydration Solution (ORS) — most important
+- Clear fluids, BRAT diet (Bananas, Rice, Applesauce, Toast)
+- Antiemetics: Ondansetron for severe vomiting
+- Antibiotics ONLY for confirmed bacterial infection
+- Seek medical care if: bloody diarrhea, high fever, severe dehydration, symptoms > 3 days
+
+--- Hepatitis (التهاب الكبد) ---
+Types:
+- Hepatitis A: Fecal-oral transmission, usually self-limiting, vaccine available
+- Hepatitis B: Blood/body fluids, can become chronic, vaccine available. Treatment: Tenofovir, Entecavir
+- Hepatitis C: Blood-borne, often chronic. Treatment: Direct-acting antivirals (Sofosbuvir + Daclatasvir) — cure rate > 95%
+Diagnosis: Liver function tests (ALT, AST), Hepatitis serology, viral load
+Complications: Cirrhosis, liver failure, hepatocellular carcinoma

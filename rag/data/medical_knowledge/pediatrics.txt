@@ -1,0 +1,56 @@
+Topic: Common Pediatric Conditions (أمراض الأطفال الشائعة)
+Category: Pediatrics
+
+--- Fever in Children (الحمى عند الأطفال) ---
+Normal temperature: 36.5-37.5°C
+Fever: >= 38°C
+When to worry: < 3 months with fever >= 38°C (emergency), persistent > 3 days, febrile seizures, poor feeding
+Treatment:
+- Paracetamol (15 mg/kg every 4-6 hours) — safe from birth
+- Ibuprofen (10 mg/kg every 6-8 hours) — from 6 months
+- Fluids, light clothing, lukewarm sponging
+- NEVER give Aspirin to children (Reye's syndrome risk)
+
+--- Tonsillitis (التهاب اللوزتين) ---
+Causes: Viral (most common), Bacterial (Group A Streptococcus)
+Symptoms: Sore throat, difficulty swallowing, fever, swollen tonsils, white patches
+Diagnosis: Rapid strep test, throat culture
+Treatment:
+- Viral: Supportive (fluids, rest, Paracetamol)
+- Bacterial (Strep): Amoxicillin 50 mg/kg/day for 10 days, or Penicillin V
+- Tonsillectomy: If recurrent (>7 episodes/year) or sleep apnea
+
+--- Otitis Media (التهاب الأذن الوسطى) ---
+Very common in children < 5 years
+Symptoms: Ear pain, fever, irritability, pulling at ear, hearing difficulty
+Treatment:
+- Mild: Watch and wait 48-72 hours with pain relief
+- Moderate/Severe: Amoxicillin 80-90 mg/kg/day for 5-10 days
+- Recurrent: Referral to ENT, possible tympanostomy tubes
+
+--- Gastroenteritis in Children (النزلة المعوية) ---
+Most common cause: Rotavirus (vaccine available), Norovirus
+Danger: Dehydration — the main concern
+Signs of dehydration: Dry mouth, no tears, sunken eyes, reduced urine, lethargy
+Treatment:
+- ORS (Oral Rehydration Solution) — small frequent sips
+- Continue breastfeeding
+- BRAT diet when tolerating food
+- Zinc supplements (10-20 mg/day for 10-14 days — WHO recommendation)
+- Seek emergency if: bloody stool, severe dehydration, persistent vomiting, < 6 months
+
+--- Childhood Vaccination Schedule (جدول التطعيمات) ---
+Birth: BCG, Hepatitis B (1st dose)
+2 months: DTaP, IPV, Hib, PCV, Rotavirus, Hepatitis B (2nd dose)
+4 months: DTaP, IPV, Hib, PCV, Rotavirus
+6 months: DTaP, IPV, Hib, PCV, Hepatitis B (3rd dose), Influenza (annual)
+12 months: MMR (1st dose), Varicella, Hepatitis A, PCV booster
+18 months: DTaP booster, Hib booster
+4-6 years: DTaP, IPV, MMR (2nd dose), Varicella (2nd dose)
+Note: Schedule may vary by country. Always follow local health authority guidelines.
+
+--- Common Childhood Rashes ---
+Measles: High fever, cough, runny nose, then rash (head to toe). Vaccine preventable.
+Chickenpox: Itchy vesicular rash, fever. Vaccine available. Calamine lotion, Acyclovir if severe.
+Hand-Foot-Mouth Disease: Blisters on hands, feet, mouth. Viral (Coxsackievirus). Supportive treatment.
+Roseola: High fever 3-5 days then rash appears as fever breaks. Benign, supportive care.

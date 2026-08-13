@@ -1,0 +1,42 @@
+Topic: Heart Diseases (أمراض القلب)
+Category: Cardiology
+
+--- Coronary Artery Disease (مرض الشريان التاجي) ---
+Definition: Narrowing or blockage of coronary arteries due to plaque buildup (atherosclerosis)
+Risk Factors: Smoking, hypertension, diabetes, high cholesterol, obesity, family history
+Symptoms: Chest pain (angina), shortness of breath, fatigue
+Diagnosis: ECG, Echocardiogram, Stress test, Coronary angiography
+Treatment:
+- Medications: Aspirin, Statins, Beta-blockers, Nitroglycerin, ACE inhibitors
+- Procedures: Angioplasty with stent, Coronary artery bypass surgery (CABG)
+
+--- Heart Attack / Myocardial Infarction (النوبة القلبية) ---
+Definition: Complete blockage of blood flow to part of the heart muscle
+Symptoms: Severe chest pain (pressure, squeezing), pain radiating to left arm/jaw/back, shortness of breath, sweating, nausea
+EMERGENCY: Call ambulance immediately
+Treatment: Aspirin (chew 325 mg immediately), thrombolytics, emergency angioplasty
+Time is critical: "Time is muscle" — treatment within 90 minutes is ideal
+
+--- Heart Failure (فشل القلب) ---
+Definition: Heart cannot pump blood efficiently to meet the body's needs
+Types: Left-sided (pulmonary congestion), Right-sided (peripheral edema), Systolic vs Diastolic
+Symptoms: Shortness of breath, fatigue, swollen legs/ankles, rapid heartbeat, persistent cough
+Diagnosis: BNP blood test, Echocardiogram, Chest X-ray
+Treatment: ACE inhibitors, Beta-blockers, Diuretics (Furosemide), Spironolactone, Salt/fluid restriction
+
+--- Arrhythmias (اضطرابات نظم القلب) ---
+Types: Atrial fibrillation (AFib), Tachycardia, Bradycardia, Ventricular fibrillation
+Symptoms: Palpitations, dizziness, fainting, chest discomfort
+Diagnosis: ECG, Holter monitor, Electrophysiology study
+Treatment: Anti-arrhythmic drugs (Amiodarone), Blood thinners (Warfarin, Rivaroxaban), Cardioversion, Pacemaker, Ablation
+
+--- High Cholesterol (ارتفاع الكوليسترول) ---
+Types:
+- LDL ("bad" cholesterol): Should be < 100 mg/dL (high risk), < 130 mg/dL (general)
+- HDL ("good" cholesterol): Should be > 40 mg/dL (men), > 50 mg/dL (women)
+- Total Cholesterol: Should be < 200 mg/dL
+- Triglycerides: Should be < 150 mg/dL
+Treatment:
+- Statins: Atorvastatin, Rosuvastatin (first-line)
+- Lifestyle: Low-fat diet, exercise, weight loss, quit smoking
+- Other medications: Ezetimibe, PCSK9 inhibitors for resistant cases

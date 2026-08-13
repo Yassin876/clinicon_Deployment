@@ -1,0 +1,700 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\ZBOOK\AppData\Local\Programs\Python\Python311\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ZBOOK\Clinicon\hospital\hospital\clinic-backend
+plugins: anyio-4.13.0, Faker-20.1.0, langsmith-0.3.45, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 129 items
+
+tests/test_admin.py::TestAdminListUsers::test_admin_lists_all_users PASSED [  0%]
+tests/test_admin.py::TestAdminListUsers::test_doctor_blocked_from_admin_users PASSED [  1%]
+tests/test_admin.py::TestAdminListUsers::test_patient_blocked_from_admin_users PASSED [  2%]
+tests/test_admin.py::TestAdminListUsers::test_unauthenticated_blocked_from_admin_users PASSED [  3%]
+tests/test_admin.py::TestToggleDoctorStatus::test_admin_toggles_doctor_active_status PASSED [  3%]
+tests/test_admin.py::TestToggleDoctorStatus::test_toggle_nonexistent_doctor PASSED [  4%]
+tests/test_admin.py::TestDeleteUser::test_admin_deletes_other_user FAILED [  5%]
+tests/test_admin.py::TestDeleteUser::test_admin_cannot_delete_self PASSED [  6%]
+tests/test_admin.py::TestDeleteUser::test_admin_deletes_nonexistent_user PASSED [  6%]
+tests/test_admin.py::TestDeleteUser::test_doctor_cannot_delete_users PASSED [  7%]
+tests/test_admin.py::TestAuditLogs::test_admin_reads_audit_logs PASSED   [  8%]
+tests/test_admin.py::TestAuditLogs::test_audit_logs_default_limit PASSED [  9%]
+tests/test_admin.py::TestAuditLogs::test_audit_logs_custom_limit PASSED  [ 10%]
+tests/test_admin.py::TestAuditLogs::test_doctor_blocked_from_audit_logs PASSED [ 10%]
+tests/test_admin.py::TestAuditLogs::test_patient_blocked_from_audit_logs PASSED [ 11%]
+tests/test_appointments.py::TestListDoctors::test_list_doctors_no_auth PASSED [ 12%]
+tests/test_appointments.py::TestBookAppointment::test_book_with_doctor_id PASSED [ 13%]
+tests/test_appointments.py::TestBookAppointment::test_book_without_doctor_id_fallback PASSED [ 13%]
+tests/test_appointments.py::TestBookAppointment::test_book_duplicate_same_phone_same_day PASSED [ 14%]
+tests/test_appointments.py::TestBookAppointment::test_book_invalid_phone_short PASSED [ 15%]
+tests/test_appointments.py::TestBookAppointment::test_book_invalid_phone_bad_prefix PASSED [ 16%]
+tests/test_appointments.py::TestBookAppointment::test_book_short_name PASSED [ 17%]
+tests/test_appointments.py::TestBookAppointment::test_book_returns_estimated_time PASSED [ 17%]
+tests/test_appointments.py::TestPatientQueue::test_doctor_sees_patients PASSED [ 18%]
+tests/test_appointments.py::TestPatientQueue::test_patient_blocked_from_patients PASSED [ 19%]
+tests/test_appointments.py::TestPatientQueue::test_unauthenticated_blocked_from_patients PASSED [ 20%]
+tests/test_appointments.py::TestPatientQueue::test_get_queue_authenticated PASSED [ 20%]
+tests/test_appointments.py::TestPatientQueue::test_get_queue_unauthenticated PASSED [ 21%]
+tests/test_appointments.py::TestStats::test_doctor_sees_stats PASSED     [ 22%]
+tests/test_appointments.py::TestStats::test_admin_sees_stats PASSED      [ 23%]
+tests/test_appointments.py::TestStats::test_patient_blocked_from_stats PASSED [ 24%]
+tests/test_appointments.py::TestStats::test_unauthenticated_blocked_from_stats PASSED [ 24%]
+tests/test_appointments.py::TestMarkDone::test_mark_appointment_done PASSED [ 25%]
+tests/test_appointments.py::TestMarkDone::test_mark_already_done_appointment PASSED [ 26%]
+tests/test_appointments.py::TestMarkDone::test_mark_nonexistent_appointment PASSED [ 27%]
+tests/test_appointments.py::TestMarkDone::test_patient_cannot_mark_done PASSED [ 27%]
+tests/test_appointments.py::TestClearAppointments::test_admin_clears_all_appointments PASSED [ 28%]
+tests/test_appointments.py::TestClearAppointments::test_doctor_cannot_clear_appointments PASSED [ 29%]
+tests/test_appointments.py::TestClearAppointments::test_patient_cannot_clear_appointments PASSED [ 30%]
+tests/test_auth.py::TestHealthCheck::test_health_ok PASSED               [ 31%]
+tests/test_auth.py::TestRegister::test_register_patient_success PASSED   [ 31%]
+tests/test_auth.py::TestRegister::test_register_doctor_success FAILED    [ 32%]
+tests/test_auth.py::TestRegister::test_register_admin_success FAILED     [ 33%]
+tests/test_auth.py::TestRegister::test_register_duplicate_email PASSED   [ 34%]
+tests/test_auth.py::TestRegister::test_register_duplicate_phone PASSED   [ 34%]
+tests/test_auth.py::TestRegister::test_register_weak_password PASSED     [ 35%]
+tests/test_auth.py::TestRegister::test_register_invalid_phone_format PASSED [ 36%]
+tests/test_auth.py::TestRegister::test_register_missing_required_fields PASSED [ 37%]
+tests/test_auth.py::TestLogin::test_login_success_patient PASSED         [ 37%]
+tests/test_auth.py::TestLogin::test_login_success_doctor PASSED          [ 38%]
+tests/test_auth.py::TestLogin::test_login_wrong_password PASSED          [ 39%]
+tests/test_auth.py::TestLogin::test_login_nonexistent_email PASSED       [ 40%]
+tests/test_auth.py::TestLogin::test_login_empty_body PASSED              [ 41%]
+tests/test_auth.py::TestVerifyTokenStub::test_verify_token_stub PASSED   [ 41%]
+tests/test_database.py::test_database_crud_schema PASSED                 [ 42%]
+tests/test_files.py::TestFileUpload::test_patient_uploads_file PASSED    [ 43%]
+tests/test_files.py::TestFileUpload::test_patient_uploads_image PASSED   [ 44%]
+tests/test_files.py::TestFileUpload::test_doctor_cannot_upload_file PASSED [ 44%]
+tests/test_files.py::TestFileUpload::test_unauthenticated_cannot_upload_file PASSED [ 45%]
+tests/test_files.py::TestFileRetrieval::test_patient_gets_own_files PASSED [ 46%]
+tests/test_files.py::TestFileRetrieval::test_doctor_gets_patient_files PASSED [ 47%]
+tests/test_files.py::TestFileRetrieval::test_admin_gets_patient_files PASSED [ 48%]
+tests/test_files.py::TestFileRetrieval::test_doctor_gets_files_for_nonexistent_patient PASSED [ 48%]
+tests/test_files.py::TestFileRetrieval::test_invalid_patient_id_format PASSED [ 49%]
+tests/test_files.py::TestFileRetrieval::test_patient_cannot_access_other_patient_files PASSED [ 50%]
+tests/test_full_scenario.py::test_full_scenario_standalone FAILED        [ 51%]
+tests/test_medications.py::TestPatientMedications::test_patient_adds_medication PASSED [ 51%]
+tests/test_medications.py::TestPatientMedications::test_patient_lists_own_medications PASSED [ 52%]
+tests/test_medications.py::TestPatientMedications::test_patient_updates_own_medication PASSED [ 53%]
+tests/test_medications.py::TestPatientMedications::test_patient_soft_deletes_medication PASSED [ 54%]
+tests/test_medications.py::TestPatientMedications::test_patient_adds_reminders PASSED [ 55%]
+tests/test_medications.py::TestPatientMedications::test_patient_cannot_add_reminder_to_other_patients_med PASSED [ 55%]
+tests/test_medications.py::TestPatientMedications::test_doctor_cannot_use_patient_medications_endpoint PASSED [ 56%]
+tests/test_medications.py::TestPatientMedications::test_telegram_status_unlinked PASSED [ 57%]
+tests/test_medications.py::TestDoctorMedications::test_doctor_reads_patient_medications PASSED [ 58%]
+tests/test_medications.py::TestDoctorMedications::test_doctor_prescribes_medication PASSED [ 58%]
+tests/test_medications.py::TestDoctorMedications::test_doctor_prescribes_nonexistent_patient PASSED [ 59%]
+tests/test_medications.py::TestDoctorMedications::test_doctor_updates_medication PASSED [ 60%]
+tests/test_medications.py::TestDoctorMedications::test_doctor_soft_deletes_medication PASSED [ 61%]
+tests/test_patient_notes.py::TestPatientNotes::test_doctor_adds_note PASSED [ 62%]
+tests/test_patient_notes.py::TestPatientNotes::test_doctor_adds_multiple_notes PASSED [ 62%]
+tests/test_patient_notes.py::TestPatientNotes::test_doctor_reads_patient_notes PASSED [ 63%]
+tests/test_patient_notes.py::TestPatientNotes::test_admin_reads_patient_notes PASSED [ 64%]
+tests/test_patient_notes.py::TestPatientNotes::test_patient_cannot_read_notes PASSED [ 65%]
+tests/test_patient_notes.py::TestPatientNotes::test_patient_cannot_add_notes PASSED [ 65%]
+tests/test_patient_notes.py::TestPatientNotes::test_unauthenticated_cannot_read_notes PASSED [ 66%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_patients PASSED [ 67%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_stats PASSED [ 68%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_admin_users PASSED [ 68%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_admin_audit_logs PASSED [ 69%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_medications_post PASSED [ 70%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_medications_get PASSED [ 71%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_visits_post PASSED [ 72%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_patient_notes_post PASSED [ 72%]
+tests/test_rbac.py::TestUnauthenticatedAccess::test_no_token_files_upload PASSED [ 73%]
+tests/test_rbac.py::TestInvalidTokenAccess::test_malformed_token_patients PASSED [ 74%]
+tests/test_rbac.py::TestInvalidTokenAccess::test_expired_token_stats PASSED [ 75%]
+tests/test_rbac.py::TestInvalidTokenAccess::test_malformed_token_admin PASSED [ 75%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_get_patients_list PASSED [ 76%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_get_stats PASSED [ 77%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_clear_appointments PASSED [ 78%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_mark_appointment_done PASSED [ 79%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_list_admin_users PASSED [ 79%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_delete_user PASSED [ 80%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_read_audit_logs PASSED [ 81%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_create_visit PASSED [ 82%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_update_visit PASSED [ 82%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_view_other_patient_visits PASSED [ 83%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_add_note PASSED [ 84%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_read_notes PASSED [ 85%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_read_other_patients_files PASSED [ 86%]
+tests/test_rbac.py::TestPatientAccessDenied::test_patient_cannot_add_other_patient_medication PASSED [ 86%]
+tests/test_rbac.py::TestDoctorAccessDenied::test_doctor_cannot_list_admin_users PASSED [ 87%]
+tests/test_rbac.py::TestDoctorAccessDenied::test_doctor_cannot_delete_user PASSED [ 88%]
+tests/test_rbac.py::TestDoctorAccessDenied::test_doctor_cannot_read_audit_logs PASSED [ 89%]
+tests/test_rbac.py::TestDoctorAccessDenied::test_doctor_cannot_clear_all_appointments PASSED [ 89%]
+tests/test_rbac.py::TestDoctorAccessDenied::test_doctor_cannot_upload_file PASSED [ 90%]
+tests/test_rbac.py::TestDoctorAccessDenied::test_doctor_cannot_use_patient_medications_enpoint PASSED [ 91%]
+tests/test_register.py::test_user_registration_standalone FAILED         [ 92%]
+tests/test_visits.py::TestVisitCreation::test_doctor_creates_visit PASSED [ 93%]
+tests/test_visits.py::TestVisitCreation::test_patient_cannot_create_visit PASSED [ 93%]
+tests/test_visits.py::TestVisitCreation::test_unauthenticated_cannot_create_visit PASSED [ 94%]
+tests/test_visits.py::TestVisitCreation::test_visit_with_full_details PASSED [ 95%]
+tests/test_visits.py::TestVisitRetrieval::test_doctor_gets_patient_visits PASSED [ 96%]
+tests/test_visits.py::TestVisitRetrieval::test_admin_gets_patient_visits PASSED [ 96%]
+tests/test_visits.py::TestVisitRetrieval::test_patient_sees_own_visits PASSED [ 97%]
+tests/test_visits.py::TestVisitRetrieval::test_patient_blocked_from_other_visits PASSED [ 98%]
+tests/test_visits.py::TestVisitUpdate::test_doctor_updates_visit PASSED  [ 99%]
+tests/test_visits.py::TestVisitUpdate::test_patient_cannot_update_visit PASSED [100%]
+
+================================== FAILURES ===================================
+________________ TestDeleteUser.test_admin_deletes_other_user _________________
+
+self = <test_admin.TestDeleteUser object at 0x0000022F8C9AAA10>
+client = <starlette.testclient.TestClient object at 0x0000022F8CB41290>
+seeded_users = {'admin_id': '3407373b-4620-4ca1-a8d5-557aebb0a12a', 'doctor_user_id': '09e1d180-c727-46b5-ba9d-36193953835e', 'doctor_id': '6d56c2f7-0687-4cfd-8715-6c8dcaac7be8', 'patient_user_id': 'c31599f3-a27b-415a-9424-b24f7be2683d', ...}
+admin_headers = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNDA3MzczYi00NjIwLTRjYTEtYThkNS01NTdhZWJiMGE...WFpbCI6ImFkbWluQHRlc3QuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzg2MjY2Mzg4fQ.Jx0Kf_4WrpCbb6NQv_GRyIaNWTAQaMFN1vlROFVojZs'}
+
+    def test_admin_deletes_other_user(self, client, seeded_users, admin_headers):
+        """DELETE /api/admin/users/{id} \u2014 admin deletes another user \u2192 204"""
+        # Register a throwaway user
+        reg = client.post("/api/auth/register", json={
+            "full_name": "\u0645\u0633\u062a\u062e\u062f\u0645 \u0644\u0644\u062d\u0630\u0641",
+            "email": "delete_me@test.com",
+            "phone_number": "01099991111",
+            "role": "patient",
+            "password": "DeleteMe123",
+        })
+        assert reg.status_code == 201
+        user_id = reg.json()["id"]
+    
+        res = client.delete(f"/api/admin/users/{user_id}", headers=admin_headers)
+>       assert res.status_code == 204
+E       assert 500 == 204
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_admin.py:71: AssertionError
+---------------------------- Captured stdout call -----------------------------
+Server Error: (sqlite3.IntegrityError) NOT NULL constraint failed: patients.user_id
+[SQL: UPDATE patients SET user_id=?, updated_at=? WHERE patients.id = ?]
+[parameters: (None, '2026-08-08 09:06:31.000431', 'bdfb0a4ba7c84f10b38b1315f5ea2d92')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+__________________ TestRegister.test_register_doctor_success __________________
+
+self = <test_auth.TestRegister object at 0x0000022F8C9E3D10>
+client = <starlette.testclient.TestClient object at 0x0000022F8CB41290>
+
+    def test_register_doctor_success(self, client):
+        """Valid doctor registration \u2192 201"""
+        res = client.post("/api/auth/register", json={
+            "full_name": "\u062f. \u0643\u0631\u064a\u0645 \u062d\u0633\u0646",
+            "email": "dr.karim@test.com",
+            "phone_number": "01044444445",
+            "role": "doctor",
+            "password": "DocPass1234",
+            "specialization": "\u0642\u0644\u0628 \u0648\u0623\u0648\u0639\u064a\u0629 \u062f\u0645\u0648\u064a\u0629",
+            "bio": "\u0623\u062e\u0635\u0627\u0626\u064a \u0642\u0644\u0628",
+        })
+>       assert res.status_code == 201
+E       assert 400 == 201
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+tests\test_auth.py:43: AssertionError
+__________________ TestRegister.test_register_admin_success ___________________
+
+self = <test_auth.TestRegister object at 0x0000022F8C9E4350>
+client = <starlette.testclient.TestClient object at 0x0000022F8CB41290>
+
+    def test_register_admin_success(self, client):
+        """Valid admin registration \u2192 201"""
+        res = client.post("/api/auth/register", json={
+            "full_name": "Admin Test User",
+            "email": "admin2@test.com",
+            "phone_number": "01055555556",
+            "role": "admin",
+            "password": "AdminPass99",
+        })
+>       assert res.status_code == 201
+E       assert 403 == 201
+E        +  where 403 = <Response [403 Forbidden]>.status_code
+
+tests\test_auth.py:55: AssertionError
+________________________ test_full_scenario_standalone ________________________
+
+self = <sqlalchemy.engine.base.Connection object at 0x0000022F8E0AF550>
+dialect = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000022F8C37BCD0>
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x0000022F8E0AF690>
+statement = <sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x0000022F8E0AF6D0>
+parameters = [('patient@clinic.com', 1, 0)]
+
+    def _exec_single_context(
+        self,
+        dialect: Dialect,
+        context: ExecutionContext,
+        statement: Union[str, Compiled],
+        parameters: Optional[_AnyMultiExecuteParams],
+    ) -> CursorResult[Any]:
+        """continue the _execute_context() method for a single DBAPI
+        cursor.execute() or cursor.executemany() call.
+    
+        """
+        if dialect.bind_typing is BindTyping.SETINPUTSIZES:
+            generic_setinputsizes = context._prepare_set_input_sizes()
+    
+            if generic_setinputsizes:
+                try:
+                    dialect.do_set_input_sizes(
+                        context.cursor, generic_setinputsizes, context
+                    )
+                except BaseException as e:
+                    self._handle_dbapi_exception(
+                        e, str(statement), parameters, None, context
+                    )
+    
+        cursor, str_statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        effective_parameters: Optional[_AnyExecuteParams]
+    
+        if not context.executemany:
+            effective_parameters = parameters[0]
+        else:
+            effective_parameters = parameters
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                str_statement, effective_parameters = fn(
+                    self,
+                    cursor,
+                    str_statement,
+                    effective_parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+            self._log_info(str_statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        effective_parameters,
+                        batches=10,
+                        ismulti=context.executemany,
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]",
+                    stats,
+                )
+    
+        evt_handled: bool = False
+        try:
+            if context.execute_style is ExecuteStyle.EXECUTEMANY:
+                effective_parameters = cast(
+                    "_CoreMultiExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor,
+                        str_statement,
+                        effective_parameters,
+                        context,
+                    )
+            elif not effective_parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, str_statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, str_statement, context
+                    )
+            else:
+                effective_parameters = cast(
+                    "_CoreSingleExecuteParams", effective_parameters
+                )
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(
+                            cursor,
+                            str_statement,
+                            effective_parameters,
+                            context,
+                        ):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, str_statement, effective_parameters, context
+                    )
+
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:1965: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000022F8C37BCD0>
+cursor = <sqlite3.Cursor object at 0x0000022F8DFABE40>
+statement = 'SELECT users.id AS users_id, users.full_name AS users_full_name, users.email AS users_email, users.password_hash AS u...d_at AS users_created_at, users.updated_at AS users_updated_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?'
+parameters = ('patient@clinic.com', 1, 0)
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x0000022F8E0AF690>
+
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+E       sqlite3.OperationalError: no such table: users
+
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py:921: OperationalError
+
+The above exception was the direct cause of the following exception:
+
+    def test_full_scenario_standalone():
+        print("=" * 60)
+        print("\U0001f9ea \u0628\u062f\u0621 \u0633\u064a\u0646\u0627\u0631\u064a\u0648 \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u0634\u0627\u0645\u0644 \u0644\u0644\u0646\u0638\u0627\u0645 (Full E2E Test Scenario)")
+        print("=" * 60)
+    
+        # 1. \u0625\u0639\u0627\u062f\u0627\u062a \u062a\u0647\u064a\u0626\u0629 \u0642\u0627\u0639\u062f\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a
+        print("\\n1\ufe0f\u20e3 \u0625\u0639\u0627\u062f\u0629 \u0628\u0646\u0627\u0621 \u062c\u062f\u0627\u0648\u0644 \u0642\u0627\u0639\u062f\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a...")
+        Base.metadata.drop_all(bind=engine)
+        Base.metadata.create_all(bind=engine)
+        print("\u2705 \u062a\u0645 \u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u0627\u0648\u0644 \u0628\u0646\u062c\u0627\u062d.")
+    
+        db = SessionLocal()
+    
+        # 2. \u0625\u0646\u0634\u0627\u0621 \u062d\u0633\u0627\u0628\u0627\u062a \u0627\u0644\u0623\u062f\u0648\u0627\u0631 \u0627\u0644\u062b\u0644\u0627\u062b\u0629 (\u0623\u062f\u0645\u0646\u060c \u0637\u0628\u064a\u0628\u060c \u0645\u0631\u064a\u0636)
+        print("\\n2\ufe0f\u20e3 \u0625\u0646\u0634\u0627\u0621 \u062d\u0633\u0627\u0628\u0627\u062a \u0627\u0644\u0646\u0638\u0627\u0645 (\u0623\u062f\u0645\u0646\u060c \u0637\u0628\u064a\u0628\u060c \u0645\u0631\u064a\u0636)...")
+    
+        from app.core import security
+    
+        # \u0623\u062f\u0645\u0646
+        admin_user = User(
+            full_name="\u062f. \u0623\u062d\u0645\u062f \u0627\u0644\u0623\u062f\u0645\u0646",
+            email="admin@clinic.com",
+            phone_number="01000000000",
+            role=UserRole.admin,
+            password_hash=security.get_password_hash("AdminPassword123"),
+            is_active=True
+        )
+        db.add(admin_user)
+        db.flush()
+    
+        # \u0637\u0628\u064a\u0628
+        doctor_user = User(
+            full_name="\u062f. \u0625\u0628\u0631\u0627\u0647\u064a\u0645 \u0639\u0644\u064a (\u0623\u062e\u0635\u0627\u0626\u064a \u0627\u0644\u0639\u0638\u0627\u0645)",
+            email="doctor@clinic.com",
+            phone_number="01111111111",
+            role=UserRole.doctor,
+            password_hash=security.get_password_hash("DoctorPassword123"),
+            is_active=True
+        )
+        db.add(doctor_user)
+        db.flush()
+        doctor_obj = Doctor(user_id=doctor_user.id, specialization="\u0639\u0638\u0627\u0645")
+        db.add(doctor_obj)
+        db.flush()
+    
+        # \u0645\u0631\u064a\u0636
+        patient_user = User(
+            full_name="\u0639\u0645\u0631 \u0623\u062d\u0645\u062f \u0627\u0644\u0645\u0631\u064a\u0636",
+            email="patient@clinic.com",
+            phone_number="01222222222",
+            role=UserRole.patient,
+            password_hash=security.get_password_hash("PatientPassword123"),
+            is_active=True
+        )
+        db.add(patient_user)
+        db.flush()
+        from datetime import date
+        patient_obj = Patient(
+            user_id=patient_user.id,
+            date_of_birth=date(1995, 5, 15),
+            gender="male",
+            address="\u0627\u0644\u0642\u0627\u0647\u0631\u0629"
+        )
+        db.add(patient_obj)
+        db.commit()
+    
+        doctor_obj = db.query(Doctor).filter(Doctor.user_id == doctor_user.id).first()
+        patient_obj = db.query(Patient).filter(Patient.user_id == patient_user.id).first()
+    
+        print(f"   \u2705 \u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u0623\u062f\u0645\u0646 ID: {admin_user.id}")
+        print(f"   \u2705 \u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u0637\u0628\u064a\u0628 ID: {doctor_obj.id} ({doctor_user.full_name})")
+        print(f"   \u2705 \u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u0645\u0631\u064a\u0636 ID: {patient_obj.id} ({patient_user.full_name})")
+    
+        # 3. \u062a\u0633\u062c\u064a\u0644 \u062f\u062e\u0648\u0644 \u0627\u0644\u0645\u0631\u064a\u0636 \u0648\u062a\u0635\u0641\u062d \u0627\u0644\u0623\u0637\u0628\u0627\u0621 \u0648\u0627\u0644\u062d\u062c\u0632
+        print("\\n3\ufe0f\u20e3 \u0631\u062d\u0644\u0629 \u0627\u0644\u0645\u0631\u064a\u0636: \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644\u060c \u062a\u0635\u0641\u062d \u0627\u0644\u0623\u0637\u0628\u0627\u0621\u060c \u0648\u062d\u062c\u0632 \u0645\u0648\u0639\u062f...")
+    
+        # \u062a\u0633\u062c\u064a\u0644 \u062f\u062e\u0648\u0644 \u0627\u0644\u0645\u0631\u064a\u0636
+>       login_res = client.post("/api/auth/login", json={
+            "email": "patient@clinic.com",
+            "password": "PatientPassword123"
+        })
+
+tests\test_full_scenario.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:552: in post
+    return super().post(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py:1144: in post
+    return self.request(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:451: in request
+    return super().request(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py:914: in send
+    response = self._send_handling_auth(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:354: in handle_request
+    raise exc
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:351: in handle_request
+    portal.call(self.app, scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\from_thread.py:334: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py:401: in __get_result
+    raise self._exception
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\from_thread.py:259: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py:1133: in __call__
+    await super().__call__(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py:113: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py:186: in __call__
+    raise exc
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py:85: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py:63: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py:53: in wrapped_app
+    raise exc
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py:716: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py:736: in app
+    await route.handle(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py:290: in handle
+    await self.app(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py:123: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py:53: in wrapped_app
+    raise exc
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py:109: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py:389: in app
+    raw_response = await run_endpoint_function(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py:288: in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\routers\auth.py:38: in login
+    return AuthService.login_user(db=db, credentials=credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\services\auth_service.py:113: in login_user
+    user = db.query(User).filter(User.email == credentials.email).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\query.py:2743: in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\query.py:2842: in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py:2262: in execute
+    return self._execute_internal(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py:2144: in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\context.py:293: in orm_execute_statement
+    result = conn.execute(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:1412: in execute
+    return meth(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\elements.py:516: in _execute_on_connection
+    return connection._execute_clauseelement(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:1635: in _execute_clauseelement
+    ret = self._execute_context(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:1844: in _execute_context
+    return self._exec_single_context(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:1984: in _exec_single_context
+    self._handle_dbapi_exception(
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:2339: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py:1965: in _exec_single_context
+    self.dialect.do_execute(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000022F8C37BCD0>
+cursor = <sqlite3.Cursor object at 0x0000022F8DFABE40>
+statement = 'SELECT users.id AS users_id, users.full_name AS users_full_name, users.email AS users_email, users.password_hash AS u...d_at AS users_created_at, users.updated_at AS users_updated_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?'
+parameters = ('patient@clinic.com', 1, 0)
+context = <sqlalchemy.dialects.sqlite.base.SQLiteExecutionContext object at 0x0000022F8E0AF690>
+
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+E       sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+E       [SQL: SELECT users.id AS users_id, users.full_name AS users_full_name, users.email AS users_email, users.password_hash AS users_password_hash, users.phone_number AS users_phone_number, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+E       FROM users 
+E       WHERE users.email = ?
+E        LIMIT ? OFFSET ?]
+E       [parameters: ('patient@clinic.com', 1, 0)]
+E       (Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py:921: OperationalError
+---------------------------- Captured stdout call -----------------------------
+============================================================\n\U0001f9ea \u0628\u062f\u0621 \u0633\u064a\u0646\u0627\u0631\u064a\u0648 \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u0634\u0627\u0645\u0644 \u0644\u0644\u0646\u0638\u0627\u0645 (Full E2E Test Scenario)\n============================================================\n\n1\ufe0f\u20e3 \u0625\u0639\u0627\u062f\u0629 \u0628\u0646\u0627\u0621 \u062c\u062f\u0627\u0648\u0644 \u0642\u0627\u0639\u062f\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a...\n\u2705 \u062a\u0645 \u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u0627\u0648\u0644 \u0628\u0646\u062c\u0627\u062d.\n\n2\ufe0f\u20e3 \u0625\u0646\u0634\u0627\u0621 \u062d\u0633\u0627\u0628\u0627\u062a \u0627\u0644\u0646\u0638\u0627\u0645 (\u0623\u062f\u0645\u0646\u060c \u0637\u0628\u064a\u0628\u060c \u0645\u0631\u064a\u0636)...\n   \u2705 \u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u0623\u062f\u0645\u0646 ID: 4cfe0541-793f-4eb3-b601-434b3c9711aa\n   \u2705 \u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u0637\u0628\u064a\u0628 ID: c8de013d-d632-4808-a453-acd863ab25a6 (\u062f. \u0625\u0628\u0631\u0627\u0647\u064a\u0645 \u0639\u0644\u064a (\u0623\u062e\u0635\u0627\u0626\u064a \u0627\u0644\u0639\u0638\u0627\u0645))\n   \u2705 \u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0627\u0644\u0645\u0631\u064a\u0636 ID: 8c6863d5-23f6-417f-aa27-63b1b27db940 (\u0639\u0645\u0631 \u0623\u062d\u0645\u062f \u0627\u0644\u0645\u0631\u064a\u0636)\n\n3\ufe0f\u20e3 \u0631\u062d\u0644\u0629 \u0627\u0644\u0645\u0631\u064a\u0636: \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644\u060c \u062a\u0635\u0641\u062d \u0627\u0644\u0623\u0637\u0628\u0627\u0621\u060c \u0648\u062d\u062c\u0632 \u0645\u0648\u0639\u062f...\nServer Error: (sqlite3.OperationalError) no such table: users\n[SQL: SELECT users.id AS users_id, users.full_name AS users_full_name, users.email AS users_email, users.password_hash AS users_password_hash, users.phone_number AS users_phone_number, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at \nFROM users \nWHERE users.email = ?\n LIMIT ? OFFSET ?]\n[parameters: ('patient@clinic.com', 1, 0)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)
+______________________ test_user_registration_standalone ______________________
+
+    def test_user_registration_standalone():
+        print("\U0001f504 Starting user registration logic verification...")
+    
+        # 1. Recreate tables
+        Base.metadata.drop_all(bind=engine)
+        Base.metadata.create_all(bind=engine)
+        print("\u2705 Schema built.")
+    
+        db = SessionLocal()
+        try:
+            # Test 1: Successful Patient registration
+            print("\\n\U0001f9ea Test 1: Valid Patient registration...")
+            patient_data = UserCreate(
+                full_name="\u0639\u0645\u0631 \u0645\u0631\u064a\u0636 \u062a\u062c\u0631\u064a\u0628\u064a",
+                email="patient.test@example.com",
+                phone_number="01087654321",
+                role="patient",
+                password="SecurePassword123",
+                date_of_birth="1995-12-10",
+                gender="male",
+                address="\u0627\u0644\u0642\u0627\u0647\u0631\u0629\u060c \u0645\u0635\u0631"
+            )
+            user_p = AuthService.register_user(db, patient_data)
+            print(f"   - User ID: {user_p.id}, Role: {user_p.role}")
+    
+            # Verify Patient record exists
+            patient_record = db.query(Patient).filter(Patient.user_id == user_p.id).first()
+            assert patient_record is not None
+            assert patient_record.gender == "male"
+            print("   \u2705 Patient profile created and linked correctly.")
+    
+            # Test 2: Successful Doctor registration
+            print("\\n\U0001f9ea Test 2: Valid Doctor registration...")
+            doctor_data = UserCreate(
+                full_name="\u062f. \u0623\u062d\u0645\u062f \u0637\u0628\u064a\u0628 \u062a\u062c\u0631\u064a\u0628\u064a",
+                email="doctor.test@example.com",
+                phone_number="01112223344",
+                role="doctor",
+                password="DocSecurePassword456",
+                specialization="\u062c\u0631\u0627\u062d\u0629 \u0627\u0644\u0639\u0638\u0627\u0645",
+                bio="\u0623\u062e\u0635\u0627\u0626\u064a \u062c\u0631\u0627\u062d\u0629 \u0639\u0638\u0627\u0645 \u0648\u062e\u0628\u0631\u0629 10 \u0633\u0646\u0648\u0627\u062a"
+            )
+>           user_d = AuthService.register_user(db, doctor_data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_register.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\services\auth_service.py:107: in register_user
+    raise e
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+db = <sqlalchemy.orm.session.Session object at 0x0000022F8DCB9C10>
+details = UserCreate(full_name='\u062f. \u0623\u062d\u0645\u062f \u0637\u0628\u064a\u0628 \u062a\u062c\u0631\u064a\u0628\u064a', email='doctor.test@example.com', phone_number='01112223344', role=<UserRol...ne=None, specialization='\u062c\u0631\u0627\u062d\u0629 \u0627\u0644\u0639\u0638\u0627\u0645', bio='\u0623\u062e\u0635\u0627\u0626\u064a \u062c\u0631\u0627\u062d\u0629 \u0639\u0638\u0627\u0645 \u0648\u062e\u0628\u0631\u0629 10 \u0633\u0646\u0648\u0627\u062a', location_url=None, availabilities=None)
+
+    @staticmethod
+    def register_user(db: Session, details: UserCreate) -> User:
+        # Block admin self-registration — admin accounts are created by existing admins only
+        if details.role == UserRole.admin:
+            raise HTTPException(status_code=403, detail="\u0644\u0627 \u064a\u0645\u0643\u0646 \u0625\u0646\u0634\u0627\u0621 \u062d\u0633\u0627\u0628 \u0645\u0633\u0624\u0648\u0644 \u0645\u0646 \u0635\u0641\u062d\u0629 \u0627\u0644\u062a\u0633\u062c\u064a\u0644")
+    
+        # Check email uniqueness
+        existing_email_user = db.query(User).filter(User.email == details.email).first()
+        if existing_email_user:
+            raise HTTPException(status_code=400, detail="\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u0645\u0633\u062c\u0644 \u0628\u0627\u0644\u0641\u0639\u0644")
+    
+        # Check phone uniqueness (if phone number is provided)
+        if details.phone_number:
+            existing_phone_user = db.query(User).filter(User.phone_number == details.phone_number).first()
+            if existing_phone_user:
+                raise HTTPException(status_code=400, detail="\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641 \u0645\u0633\u062c\u0644 \u0628\u0627\u0644\u0641\u0639\u0644")
+    
+        # Hash password first (outside transaction) to catch bcrypt errors early
+        try:
+            password_hash = security.get_password_hash(details.password)
+        except Exception as hash_err:
+            raise HTTPException(status_code=400, detail=f"\u062e\u0637\u0623 \u0641\u064a \u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631: {str(hash_err)}")
+    
+        # Atomic transaction context
+        try:
+            # Create User
+            user = User(
+                full_name=details.full_name,
+                email=details.email,
+                password_hash=password_hash,
+                phone_number=details.phone_number,
+                role=details.role
+            )
+            db.add(user)
+            db.flush()  # Extract the created user ID for referencing
+    
+            # Create specific profiles
+            if details.role == UserRole.patient:
+                patient = Patient(
+                    user_id=user.id,
+                    date_of_birth=details.date_of_birth,
+                    gender=details.gender,
+                    address=details.address,
+                    blood_type=details.blood_type,
+                    emergency_contact_name=details.emergency_contact_name,
+                    emergency_contact_phone=details.emergency_contact_phone
+                )
+                db.add(patient)
+            elif details.role == UserRole.doctor:
+                if not details.availabilities or len(details.availabilities) == 0:
+>                   raise HTTPException(
+                        status_code=400,
+                        detail="\u062c\u062f\u0648\u0644 \u0627\u0644\u0645\u0648\u0627\u0639\u064a\u062f \u0627\u0644\u0623\u0633\u0628\u0648\u0639\u064a \u0645\u0637\u0644\u0648\u0628 \u0639\u0646\u062f \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u0637\u0628\u064a\u0628 \u0644\u0623\u0648\u0644 \u0645\u0631\u0629 (doctor_availability)"
+                    )
+E                   fastapi.exceptions.HTTPException: 400: \u062c\u062f\u0648\u0644 \u0627\u0644\u0645\u0648\u0627\u0639\u064a\u062f \u0627\u0644\u0623\u0633\u0628\u0648\u0639\u064a \u0645\u0637\u0644\u0648\u0628 \u0639\u0646\u062f \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u0637\u0628\u064a\u0628 \u0644\u0623\u0648\u0644 \u0645\u0631\u0629 (doctor_availability)
+
+app\services\auth_service.py:61: HTTPException
+---------------------------- Captured stdout call -----------------------------
+\U0001f504 Starting user registration logic verification...\n\u2705 Schema built.\n\n\U0001f9ea Test 1: Valid Patient registration...\n   - User ID: efd801e7-7dc2-41aa-9024-ff34b65ef972, Role: UserRole.patient\n   \u2705 Patient profile created and linked correctly.\n\n\U0001f9ea Test 2: Valid Doctor registration...
+============================== warnings summary ===============================
+tests/test_medications.py::TestPatientMedications::test_patient_adds_medication
+  C:\Users\ZBOOK\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py:171: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_medications.py::TestPatientMedications::test_patient_adds_medication returned <class 'str'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_visits.py::TestVisitCreation::test_doctor_creates_visit
+  C:\Users\ZBOOK\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py:171: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_visits.py::TestVisitCreation::test_doctor_creates_visit returned <class 'str'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_admin.py::TestDeleteUser::test_admin_deletes_other_user - a...
+FAILED tests/test_auth.py::TestRegister::test_register_doctor_success - asser...
+FAILED tests/test_auth.py::TestRegister::test_register_admin_success - assert...
+FAILED tests/test_full_scenario.py::test_full_scenario_standalone - sqlalchem...
+FAILED tests/test_register.py::test_user_registration_standalone - fastapi.ex...
+================= 5 failed, 124 passed, 2 warnings in 25.51s ==================

@@ -1,0 +1,56 @@
+Topic: Anemia (الأنيميا / فقر الدم)
+Category: Hematology
+
+Definition:
+Anemia is a condition where the blood lacks enough healthy red blood cells or hemoglobin to carry adequate oxygen to the body's tissues.
+
+Types:
+1. Iron Deficiency Anemia: Most common type. Caused by insufficient iron intake, blood loss, or poor absorption.
+2. Vitamin B12 Deficiency Anemia: Due to lack of B12, often from poor diet or pernicious anemia.
+3. Folate Deficiency Anemia: Due to insufficient folic acid.
+4. Sickle Cell Anemia: Inherited condition where red blood cells are abnormally shaped.
+5. Thalassemia: Inherited blood disorder with reduced hemoglobin production.
+6. Aplastic Anemia: Bone marrow fails to produce enough blood cells.
+7. Hemolytic Anemia: Red blood cells are destroyed faster than they are made.
+
+Symptoms:
+- Fatigue and weakness
+- Pale or yellowish skin
+- Shortness of breath
+- Dizziness or lightheadedness
+- Cold hands and feet
+- Fast or irregular heartbeat
+- Chest pain
+- Headache
+- Brittle nails
+- Craving non-food items (pica)
+
+Diagnosis:
+- Complete Blood Count (CBC): Hemoglobin, Hematocrit, MCV, MCH, MCHC
+- Normal Hemoglobin: Males 13.5-17.5 g/dL, Females 12.0-16.0 g/dL
+- Ferritin level (iron stores)
+- Serum iron and TIBC
+- Vitamin B12 and folate levels
+- Peripheral blood smear
+- Reticulocyte count
+
+Treatment:
+Iron Deficiency:
+- Ferrous Sulfate 325 mg (1-3 times daily)
+- Iron-rich foods: red meat, spinach, beans, fortified cereals
+- Vitamin C enhances iron absorption
+- IV iron for severe cases or malabsorption
+
+B12 Deficiency:
+- B12 injections (intramuscular)
+- Oral B12 supplements
+- B12-rich foods: meat, fish, dairy, eggs
+
+Folate Deficiency:
+- Folic acid supplements (1 mg daily)
+- Folate-rich foods: leafy greens, citrus fruits, beans
+
+When to See a Doctor:
+- Persistent fatigue not improved by rest
+- Hemoglobin below 7 g/dL (may need blood transfusion)
+- Symptoms of severe anemia: chest pain, rapid heartbeat, fainting

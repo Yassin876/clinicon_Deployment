@@ -1,0 +1,59 @@
+Topic: Neurological Conditions (أمراض الجهاز العصبي)
+Category: Neurology
+
+--- Migraine (الصداع النصفي) ---
+Definition: Recurring headache disorder with moderate to severe throbbing pain, usually one-sided
+Phases: Prodrome, Aura (visual/sensory disturbances — in 25%), Headache, Postdrome
+Triggers: Stress, hormonal changes, certain foods (chocolate, cheese, caffeine), sleep changes, bright lights
+Symptoms: Throbbing headache, nausea, vomiting, sensitivity to light and sound, lasting 4-72 hours
+Treatment:
+- Acute: Paracetamol + NSAIDs (Ibuprofen), Triptans (Sumatriptan) for moderate-severe
+- Prevention (if >= 4 attacks/month): Propranolol, Amitriptyline, Topiramate, Valproate
+- Lifestyle: Regular sleep, avoid triggers, stress management
+- CGRP inhibitors: Erenumab (newer preventive option)
+
+--- Epilepsy (الصرع) ---
+Definition: Neurological disorder characterized by recurrent unprovoked seizures
+Types: Focal (partial), Generalized (absence, tonic-clonic), Unknown onset
+Diagnosis: EEG (electroencephalogram), MRI brain, clinical history
+Treatment:
+- First-line: Levetiracetam, Valproate, Carbamazepine, Lamotrigine
+- Choice depends on seizure type and patient factors
+- Medication adherence is critical — don't stop suddenly
+- Surgery for drug-resistant focal epilepsy
+First Aid for Seizures:
+- Stay calm, protect from injury, don't put anything in the mouth
+- Turn on side (recovery position), time the seizure
+- Call emergency if seizure lasts > 5 minutes or first seizure
+
+--- Stroke (السكتة الدماغية) ---
+Types:
+- Ischemic (87%): Blood clot blocks brain artery
+- Hemorrhagic (13%): Brain blood vessel bursts
+FAST Signs: Face drooping, Arm weakness, Speech difficulty, Time to call emergency
+EMERGENCY: Every minute counts — "Time is brain"
+Treatment:
+- Ischemic: tPA (clot-busting drug) within 4.5 hours, Thrombectomy within 24 hours
+- Hemorrhagic: Blood pressure control, surgery if needed
+- Prevention: Control hypertension, diabetes, cholesterol; antiplatelet (Aspirin, Clopidogrel); anticoagulants for AFib
+
+--- Alzheimer's Disease (الزهايمر) ---
+Definition: Progressive neurodegenerative disease causing memory loss and cognitive decline
+Stages: Mild (forgetfulness), Moderate (confusion, behavioral changes), Severe (full dependence)
+Diagnosis: Clinical assessment, cognitive testing (MMSE, MoCA), MRI brain, PET scan
+Treatment:
+- Cholinesterase inhibitors: Donepezil, Rivastigmine, Galantamine
+- NMDA antagonist: Memantine (moderate-severe)
+- No cure yet — treatment slows progression
+- Supportive care, caregiver support, structured routine
+
+--- Parkinson's Disease (الشلل الرعاش) ---
+Definition: Progressive movement disorder due to dopamine deficiency in the brain
+Symptoms: Tremor at rest, rigidity, bradykinesia (slow movement), postural instability
+Diagnosis: Clinical (no definitive test), DaTscan
+Treatment:
+- Levodopa/Carbidopa (most effective)
+- Dopamine agonists: Pramipexole, Ropinirole
+- MAO-B inhibitors: Selegiline, Rasagiline
+- Physical therapy, exercise, speech therapy
+- Deep brain stimulation (DBS) for advanced cases

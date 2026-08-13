@@ -1,0 +1,62 @@
+Topic: Hypertension (ارتفاع ضغط الدم)
+Category: Cardiology
+
+Definition:
+Hypertension is a chronic condition where blood pressure in the arteries is persistently elevated. It is a major risk factor for heart disease, stroke, and kidney disease.
+
+Blood Pressure Classification:
+- Normal: < 120/80 mmHg
+- Elevated: 120-129 / < 80 mmHg
+- Stage 1 Hypertension: 130-139 / 80-89 mmHg
+- Stage 2 Hypertension: >= 140/90 mmHg
+- Hypertensive Crisis: > 180/120 mmHg (seek emergency care)
+
+Causes:
+- Primary (Essential) Hypertension: No identifiable cause, develops gradually over years (90-95% of cases)
+- Secondary Hypertension: Caused by underlying conditions such as kidney disease, adrenal gland tumors, thyroid problems, certain medications
+
+Risk Factors:
+- Age (risk increases with age)
+- Family history
+- Obesity
+- High sodium diet
+- Physical inactivity
+- Excessive alcohol consumption
+- Smoking
+- Stress
+- Chronic conditions (diabetes, kidney disease)
+
+Symptoms:
+- Often called "the silent killer" — usually no symptoms
+- Severe cases: headaches, shortness of breath, nosebleeds, dizziness
+- Hypertensive crisis: severe headache, chest pain, vision changes
+
+Diagnosis:
+- Multiple blood pressure readings on separate occasions
+- Ambulatory blood pressure monitoring (ABPM)
+- Home blood pressure monitoring
+
+Treatment:
+Lifestyle Modifications:
+- DASH diet (Dietary Approaches to Stop Hypertension)
+- Reduce sodium intake (< 2300 mg/day, ideally < 1500 mg)
+- Regular exercise (30 min most days)
+- Maintain healthy weight
+- Limit alcohol
+- Quit smoking
+- Manage stress
+
+Medications:
+- ACE Inhibitors: Lisinopril, Enalapril, Ramipril
+- ARBs: Losartan, Valsartan, Telmisartan
+- Calcium Channel Blockers: Amlodipine, Nifedipine
+- Diuretics: Hydrochlorothiazide, Furosemide
+- Beta-Blockers: Atenolol, Metoprolol, Bisoprolol
+
+Complications:
+- Heart attack and heart failure
+- Stroke
+- Kidney damage
+- Vision loss
+- Peripheral artery disease
+- Aortic aneurysm

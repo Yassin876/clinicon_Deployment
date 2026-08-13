@@ -1,0 +1,70 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+env/
+.venv/
+
+# ===== Environment & Secrets =====
+.env
+.env.local
+.env.*.local
+*.env
+
+
+**/.env
+**/.env.*
+!**/.env.example
+# ===== Node.js =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== Databases & Storage =====
+*.db
+*.sqlite
+*.sqlite3
+hospital.db
+hospital/hospital/clinic-backend/hospital.db
+rag/database/chroma_db/
+rag/chroma_db/
+chroma_db/
+
+# ===== Uploaded Patient Files =====
+hospital/hospital/clinic-backend/uploads/
+uploads/
+
+# ===== Archives =====
+*.rar
+*.zip
+*.tar.gz
+hospital/hospital/clinic-backend_boda_extracted/
+hospital/hospital/clinic-backend_boda.rar
+
+# ===== IDE & Editors =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OS Generated Files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Frontend Build Output =====
+frontend/dist/
+frontend/build/
+
+# ===== Logs & Temporary Files =====
+*.log
+/tmp/
+# ===== RAG Database =====
+rag/database/

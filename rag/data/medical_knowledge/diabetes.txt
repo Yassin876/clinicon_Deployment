@@ -1,0 +1,44 @@
+Topic: Diabetes (مرض السكري)
+Category: Endocrinology
+
+Definition:
+Diabetes mellitus is a chronic metabolic disease characterized by elevated blood sugar levels due to insufficient insulin production or the body's inability to use insulin effectively.
+
+Types:
+1. Type 1 Diabetes: An autoimmune disease where the immune system attacks insulin-producing cells in the pancreas. Usually diagnosed in children and young adults. Requires lifelong insulin therapy.
+2. Type 2 Diabetes: The most common type (90% of cases). The body becomes resistant to insulin or doesn't produce enough. Often linked to obesity, sedentary lifestyle, and genetics.
+3. Gestational Diabetes: Occurs during pregnancy and usually resolves after delivery, but increases the risk of developing Type 2 diabetes later.
+
+Symptoms:
+- Frequent urination (polyuria)
+- Excessive thirst (polydipsia)
+- Unexplained weight loss
+- Extreme fatigue
+- Blurred vision
+- Slow-healing wounds
+- Numbness or tingling in hands and feet
+
+Diagnosis:
+- Fasting Blood Sugar (FBS): Normal < 100 mg/dL, Prediabetes 100-125 mg/dL, Diabetes >= 126 mg/dL
+- HbA1c: Normal < 5.7%, Prediabetes 5.7-6.4%, Diabetes >= 6.5%
+- Oral Glucose Tolerance Test (OGTT): Diabetes >= 200 mg/dL after 2 hours
+- Random Blood Sugar: >= 200 mg/dL with symptoms
+
+Treatment:
+- Type 1: Insulin injections or insulin pump
+- Type 2: Lifestyle changes (diet + exercise), Metformin (first-line), Sulfonylureas, DPP-4 inhibitors, GLP-1 receptor agonists, SGLT2 inhibitors, Insulin if needed
+- Target HbA1c: < 7% for most adults
+
+Complications:
+- Diabetic retinopathy (eye damage)
+- Diabetic nephropathy (kidney damage)
+- Diabetic neuropathy (nerve damage)
+- Cardiovascular disease
+- Diabetic foot ulcers
+- Diabetic ketoacidosis (DKA) — emergency
+
+Prevention:
+- Maintain healthy weight
+- Regular physical activity (150 min/week)
+- Balanced diet low in refined sugars
+- Regular screening for at-risk individuals

@@ -1,0 +1,16 @@
+langchain
+langchain-core
+langchain-ollama
+requests
+python-dotenv
+
+# RAG
+chromadb
+sentence-transformers
+google-genai
+
+# Local model loading (Qwen 4-bit NF4 + BGE FP16)
+transformers>=4.41.0
+accelerate>=0.30.0
+bitsandbytes>=0.43.0
+torch

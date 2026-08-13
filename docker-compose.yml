@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  rag-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.rag
+    container_name: clinicon-rag
+    restart: always
+    ports:
+      - "8100:8100"
+    environment:
+      - PORT=8100
+      - USE_TF=0
+      - USE_TORCH=1
+
+  backend-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: clinicon-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+
+  agent-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    container_name: clinicon-agent
+    restart: always
+    ports:
+      - "8200:8200"
+    depends_on:
+      - backend-server
+      - rag-server
+    env_file:
+      - .env
+    environment:
+      - BACKEND_BASE_URL=http://backend-server:5000/api
+      - RAG_BASE_URL=http://rag-server:8100

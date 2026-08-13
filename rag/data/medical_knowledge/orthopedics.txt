@@ -1,0 +1,56 @@
+Topic: Musculoskeletal Conditions (أمراض العظام والمفاصل)
+Category: Orthopedics
+
+--- Osteoarthritis (خشونة المفاصل) ---
+Definition: Degenerative joint disease where cartilage wears down over time
+Common Sites: Knees, hips, hands, spine
+Risk Factors: Age, obesity, joint injuries, repetitive stress, genetics
+Symptoms: Joint pain, stiffness (especially morning), swelling, reduced range of motion, crepitus
+Diagnosis: X-ray (joint space narrowing, osteophytes), clinical examination
+Treatment:
+- Weight loss, physical therapy, exercise (low-impact: swimming, cycling)
+- Paracetamol (first-line for mild pain)
+- NSAIDs: Ibuprofen, Diclofenac (topical or oral)
+- Intra-articular corticosteroid injections
+- Hyaluronic acid injections
+- Joint replacement surgery for severe cases
+
+--- Osteoporosis (هشاشة العظام) ---
+Definition: Decreased bone density making bones fragile and prone to fractures
+Risk Factors: Postmenopausal women, age, low calcium, vitamin D deficiency, sedentary lifestyle, smoking, steroids
+Diagnosis: DEXA scan (T-score: Normal > -1, Osteopenia -1 to -2.5, Osteoporosis < -2.5)
+Treatment:
+- Calcium supplements: 1000-1200 mg/day
+- Vitamin D: 800-1000 IU/day
+- Bisphosphonates: Alendronate, Risedronate (first-line)
+- Weight-bearing exercises
+- Fall prevention strategies
+
+--- Low Back Pain (ألم أسفل الظهر) ---
+Causes: Muscle strain, disc herniation, degenerative disc disease, spinal stenosis, poor posture
+Red Flags: Bowel/bladder dysfunction, progressive weakness, saddle anesthesia, fever, unexplained weight loss
+Treatment:
+- Acute: Stay active (bed rest NOT recommended), NSAIDs, muscle relaxants
+- Physical therapy and core strengthening exercises
+- Chronic: Multidisciplinary approach, cognitive behavioral therapy, epidural steroid injections
+- Surgery: Only for specific indications (cauda equina, progressive neurological deficit)
+
+--- Rheumatoid Arthritis (الروماتويد) ---
+Definition: Autoimmune disease causing chronic inflammation of joints
+Symptoms: Symmetric joint pain and swelling (hands, wrists, feet), morning stiffness > 1 hour, fatigue, rheumatoid nodules
+Diagnosis: RF (Rheumatoid Factor), Anti-CCP antibodies, ESR, CRP, X-ray
+Treatment:
+- DMARDs: Methotrexate (first-line), Hydroxychloroquine, Sulfasalazine
+- Biologics: Adalimumab, Etanercept, Infliximab
+- NSAIDs and corticosteroids for symptom relief
+- Early treatment is critical to prevent joint destruction
+
+--- Gout (النقرس) ---
+Definition: Inflammatory arthritis caused by uric acid crystal deposition in joints
+Symptoms: Sudden severe pain, redness, swelling — usually big toe (podagra)
+Diagnosis: Serum uric acid (> 7 mg/dL), joint fluid analysis showing crystals
+Treatment:
+- Acute attack: Colchicine, NSAIDs (Indomethacin), Corticosteroids
+- Prevention: Allopurinol, Febuxostat (lower uric acid)
+- Diet: Avoid red meat, organ meats, shellfish, alcohol (especially beer)
+- Drink plenty of water

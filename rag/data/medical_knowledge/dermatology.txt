@@ -1,0 +1,48 @@
+Topic: Skin Diseases (الأمراض الجلدية)
+Category: Dermatology
+
+--- Eczema / Atopic Dermatitis (الإكزيما) ---
+Definition: Chronic inflammatory skin condition causing itchy, red, dry patches
+Common in: Children (often improves with age), people with allergies or asthma
+Triggers: Dry skin, irritants (soaps, detergents), allergens, stress, heat
+Treatment:
+- Moisturizers (emollients) — apply frequently
+- Topical corticosteroids: Hydrocortisone (mild), Betamethasone (moderate-severe)
+- Topical calcineurin inhibitors: Tacrolimus, Pimecrolimus
+- Antihistamines for itching: Cetirizine, Loratadine
+- Avoid triggers, short lukewarm showers
+
+--- Psoriasis (الصدفية) ---
+Definition: Autoimmune condition causing rapid skin cell turnover, forming thick scaly patches
+Symptoms: Red patches with silvery scales, itching, dry cracked skin, nail changes
+Types: Plaque (most common), Guttate, Inverse, Pustular, Erythrodermic
+Treatment:
+- Mild: Topical corticosteroids, Vitamin D analogs (Calcipotriol), Coal tar
+- Moderate: Phototherapy (UVB), Methotrexate
+- Severe: Biologics (Adalimumab, Secukinumab, Ustekinumab)
+
+--- Acne (حب الشباب) ---
+Causes: Excess sebum, clogged pores, bacteria (C. acnes), hormonal changes
+Types: Comedonal (blackheads/whiteheads), Inflammatory (papules/pustules), Cystic
+Treatment:
+- Mild: Benzoyl peroxide, Topical retinoids (Adapalene), Salicylic acid
+- Moderate: Topical antibiotics (Clindamycin) + Benzoyl peroxide
+- Severe/Cystic: Oral antibiotics (Doxycycline), Isotretinoin (Accutane)
+- Hormonal: Oral contraceptives, Spironolactone (females)
+- Don't pick or squeeze, gentle cleansing, non-comedogenic products
+
+--- Fungal Infections (العدوى الفطرية) ---
+Tinea Corporis (Ringworm): Ring-shaped rash. Treatment: Topical antifungals (Clotrimazole, Terbinafine)
+Tinea Pedis (Athlete's Foot): Between toes, itching, peeling. Treatment: Antifungal cream, keep feet dry
+Tinea Cruris (Jock Itch): Groin area. Treatment: Antifungal cream, loose clothing
+Candidiasis: Oral thrush or skin fold infection. Treatment: Nystatin, Fluconazole
+Onychomycosis (Nail Fungus): Thick, discolored nails. Treatment: Oral Terbinafine (3-6 months)
+
+--- Urticaria / Hives (الأرتيكاريا) ---
+Definition: Itchy raised welts on the skin caused by histamine release
+Causes: Allergic reactions, medications, infections, stress, idiopathic
+Treatment:
+- Antihistamines: Cetirizine, Loratadine, Fexofenadine (non-sedating)
+- Severe: Oral corticosteroids short course
+- Anaphylaxis: Epinephrine (EpiPen) — emergency
+- Chronic: Omalizumab for refractory cases

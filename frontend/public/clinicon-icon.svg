@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Stethoscope tube -->
+  <path d="M30 75 C30 75 20 75 20 60 L20 30 C20 25 25 20 30 20" stroke="#1A8A82" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M70 75 C70 75 80 75 80 60 L80 30 C80 25 75 20 70 20" stroke="#1A8A82" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Earpieces -->
+  <circle cx="30" cy="16" r="5" fill="#16403D"/>
+  <circle cx="70" cy="16" r="5" fill="#16403D"/>
+  <!-- Chest piece connector -->
+  <path d="M30 75 Q50 95 70 75" stroke="#1A8A82" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Chest piece circle -->
+  <circle cx="50" cy="95" r="14" fill="#1A8A82"/>
+  <circle cx="50" cy="95" r="9" fill="white"/>
+  <!-- Heart inside -->
+  <path d="M50 99 C50 99 43 93 43 90 C43 87 46 86 50 89 C54 86 57 87 57 90 C57 93 50 99 50 99Z" fill="#1A8A82"/>
+  <!-- ECG line -->
+  <path d="M38 56 L44 56 L47 48 L50 64 L53 48 L56 56 L62 56" stroke="#16403D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Medical cross -->
+  <rect x="82" y="38" width="18" height="7" rx="2" fill="#3DBDB5"/>
+  <rect x="88" y="32" width="7" height="18" rx="2" fill="#3DBDB5"/>
+</svg>

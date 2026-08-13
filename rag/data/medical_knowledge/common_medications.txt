@@ -1,0 +1,55 @@
+Topic: Common Medications Guide (دليل الأدوية الشائعة)
+Category: Pharmacology
+
+--- Pain Relief (مسكنات الألم) ---
+Paracetamol (Acetaminophen): Safe for pain and fever. Max 4g/day. Avoid with liver disease.
+Ibuprofen (NSAID): Pain, inflammation, fever. Take with food. Avoid with stomach ulcers, kidney disease.
+Diclofenac (NSAID): Strong anti-inflammatory. Available oral, topical, injection. Same precautions as Ibuprofen.
+Naproxen (NSAID): Longer-acting. Good for chronic pain. Take with food.
+Tramadol: Moderate-severe pain. Opioid-like. Can cause drowsiness, dependency risk.
+
+--- Antibiotics (المضادات الحيوية) ---
+Amoxicillin: Broad-spectrum penicillin. Used for respiratory, ear, urinary infections. Common allergy — ask before prescribing.
+Azithromycin (Zithromax): Respiratory, skin infections. 3-5 day courses. Don't use with cardiac arrhythmias.
+Ciprofloxacin: UTI, GI infections. Avoid in children and pregnancy. Tendon rupture risk.
+Metronidazole (Flagyl): Anaerobic infections, H. pylori, dental infections. No alcohol during treatment.
+Cephalexin: Skin, soft tissue infections. Safe alternative for mild penicillin allergy.
+Doxycycline: Acne, respiratory infections, Lyme disease. Sun sensitivity, take upright with water.
+Important: Complete the full course. Don't use antibiotics for viral infections.
+
+--- Allergy Medications (أدوية الحساسية) ---
+Cetirizine (Zyrtec): Non-sedating antihistamine. 10 mg once daily.
+Loratadine (Claritin): Non-sedating. 10 mg once daily.
+Fexofenadine (Telfast): Non-sedating. Good for chronic urticaria.
+Chlorpheniramine: Sedating antihistamine. Useful at night.
+Montelukast (Singulair): Leukotriene receptor antagonist. Used in allergic rhinitis and asthma.
+
+--- Stomach/GI Medications (أدوية المعدة) ---
+Omeprazole (PPI): Acid reflux, ulcers. Take 30 min before food. Long-term use: monitor B12, magnesium.
+Pantoprazole (PPI): Similar to Omeprazole. Available IV.
+Ranitidine (H2 Blocker): Acid reduction. Lower efficacy than PPIs.
+Antacids (Gaviscon, Maalox): Quick symptom relief. Don't use long-term.
+Domperidone (Motilium): Anti-nausea, promotes gastric motility.
+Loperamide (Imodium): Acute diarrhea. Don't use with bloody diarrhea or fever.
+Oral Rehydration Salts (ORS): Essential for dehydration from diarrhea/vomiting.
+
+--- Diabetes Medications (أدوية السكري) ---
+Metformin: First-line for Type 2. Start low, increase gradually. GI side effects common initially.
+Glimepiride / Glipizide (Sulfonylureas): Stimulate insulin release. Risk of hypoglycemia.
+Insulin: Required for Type 1, some Type 2. Various types: Rapid (Novorapid), Long-acting (Lantus).
+Empagliflozin (SGLT2 inhibitor): Also benefits heart and kidneys. Risk of UTI.
+
+--- Blood Pressure Medications (أدوية الضغط) ---
+Amlodipine: Calcium channel blocker. Once daily. May cause ankle swelling.
+Losartan: ARB. Good for diabetic patients. Monitor potassium.
+Lisinopril/Enalapril: ACE inhibitors. Dry cough side effect. Avoid in pregnancy.
+Hydrochlorothiazide: Diuretic. Monitor electrolytes.
+Bisoprolol/Atenolol: Beta-blockers. Don't stop suddenly. Avoid in asthma.
+
+--- Vitamins and Supplements (الفيتامينات) ---
+Vitamin D: 1000-2000 IU daily. Essential for bones. Deficiency very common.
+Vitamin B12: Important for nerves and blood cells. Deficiency causes fatigue and numbness.
+Iron (Ferrous Sulfate): For iron deficiency anemia. Take with vitamin C, avoid with tea/coffee.
+Folic Acid: Essential before and during pregnancy (400 mcg daily). Prevents neural tube defects.
+Calcium: 1000-1200 mg daily for bone health. Take with Vitamin D for better absorption.
+Omega-3 (Fish Oil): Heart health, anti-inflammatory. 1-2 g daily.

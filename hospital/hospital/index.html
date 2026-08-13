@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام العيادة الذكي الشامل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Main Application Header -->
+        <div class="header">
+            <h1>🏥 نظام إدارة وتتبع العيادة الذكي</h1>
+            <p>متابعة فورية للحجوزات، المريض الحالي، والروشتات بدون تعقيد</p>
+        </div>
+
+        <!-- Auth & Role Control Bar -->
+        <div class="auth-bar">
+            <div class="auth-info" id="auth-status">
+                <span>المستخدم الحالي: <strong>زائر (غير مسجل)</strong></span>
+            </div>
+            <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                <span style="font-size:0.85rem; color:var(--text-muted);">تبديل الحساب:</span>
+                <button class="btn-secondary" style="padding:5px 12px; font-size:0.85rem;" onclick="quickLogin('yassin@example.com', 'string123')">🧑‍⚕️ المريض (ياسين)</button>
+                <button class="btn-secondary" style="padding:5px 12px; font-size:0.85rem;" onclick="quickLogin('doctor@clinic.com', 'DoctorPassword123')">👨‍⚕️ الطبيب (د. إبراهيم)</button>
+                <button class="btn-secondary" style="padding:5px 12px; font-size:0.85rem;" onclick="quickLogin('admin@clinic.com', 'AdminPassword123')">🛡️ الأدمن</button>
+                <button class="btn-danger" id="logout-btn" style="padding:5px 10px; font-size:0.8rem; display:none;" onclick="logout()">خروج</button>
+            </div>
+        </div>
+
+        <!-- Role Workspace Tabs -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" id="tab-patient-btn" onclick="showTab('patient')">🧑‍⚕️ بوابة المريض والحجز</button>
+            <button class="tab-btn" id="tab-doctor-btn" onclick="showTab('doctor')">👨‍⚕️ لوحة الطبيب (المريض الحالي)</button>
+            <button class="tab-btn" id="tab-admin-btn" onclick="showTab('admin')">🛡️ الإدارة والتدقيق</button>
+            <button class="tab-btn" id="tab-api-btn" onclick="showTab('api')" style="background-color: var(--accent-slate); border:1px solid #475569;">🕹️ دليل جميع استعلامات السيرفر (API Explorer)</button>
+        </div>
+
+        <!-- ================= PATIENT WORKSPACE ================= -->
+        <div id="patient-tab" class="tab-content active">
+            <!-- 1. Doctor Selection & Booking -->
+            <div class="section-card">
+                <h2>📅 حجز موعد في العيادة</h2>
+                <div id="doctor-selection-section">
+                    <h3>🩺 اختر الطبيب المعالج:</h3>
+                    <p id="doctors-loading" style="text-align:center; color:#888;">جاري تحميل الأطباء المتاحين...</p>
+                    <div id="doctors-grid" class="doctors-grid" style="display:none;"></div>
+                </div>
+
+                <div id="booking-form-section" style="display:none; margin-top:20px;">
+                    <div id="selected-doctor-banner"></div>
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-group">
+                            <label>👤 اسم المريض الكامل</label>
+                            <input type="text" id="patient-name" required placeholder="أدخل اسمك">
+                        </div>
+                        <div class="form-group">
+                            <label>📱 رقم الهاتف (لتصلك التذكيرات)</label>
+                            <input type="tel" id="patient-phone" required placeholder="01xxxxxxxxx">
+                        </div>
+                        <div style="display:flex; gap:12px;">
+                            <button type="button" class="btn-secondary" onclick="backToDoctorSelection()">← تغيير الطبيب</button>
+                            <button type="submit" class="btn-primary" style="flex:1;">احجز الآن ✨</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Booking Confirmation Card -->
+                <div id="confirmation-section" class="confirmation" style="display: none; margin-top:20px;">
+                    <div class="success-icon">✅</div>
+                    <h2>تم الحجز بنجاح!</h2>
+                    <div class="booking-details">
+                        <div class="detail-card"><h3>🎫 رقمك في الدور</h3><div class="queue-number" id="queue-number">--</div></div>
+                        <div class="detail-card"><h3>⏰ الميعاد المتوقع</h3><div class="estimated-time" id="estimated-time">--</div></div>
+                        <div class="detail-card"><h3>👥 المرضى قبلك</h3><div class="waiting-count" id="waiting-count">--</div></div>
+                    </div>
+                    <p style="color:var(--text-muted); margin-bottom:16px;">
+                        تم ربط حجزك برقم الهاتف المحمول وسوف تتابع دورك مباشرة من الشاشة عند الطبيب.
+                    </p>
+                    <button class="btn-secondary" onclick="newBooking()">حجز موعد جديد</button>
+                </div>
+            </div>
+
+            <!-- 2. Patient Medications & Auto Reminders -->
+            <div class="section-card">
+                <h2>💊 أدوية وتذكيرات المريض</h2>
+                <form id="medication-form" style="margin-bottom:20px;">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
+                        <div class="form-group">
+                            <label>💊 اسم الدواء</label>
+                            <input type="text" id="med-name" required placeholder="مثال: بانادول إكسترا">
+                        </div>
+                        <div class="form-group">
+                            <label>⚖️ الجرعة</label>
+                            <input type="text" id="med-dosage" required placeholder="مثال: قرص">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top:12px;">
+                        <label>⏰ أوقات التذكير (لإرسال إشعار تليجرام تلقائياً عندما يحين الوقت):</label>
+                        <div style="display:flex; gap:12px; margin-top:6px;">
+                            <input type="time" id="med-time-1" class="time-input" required>
+                            <input type="time" id="med-time-2" class="time-input">
+                            <input type="time" id="med-time-3" class="time-input">
+                        </div>
+                        <small style="color:var(--text-muted);">يمكنك تحديد حتى 3 أوقات مختلفة في اليوم لهذا الدواء.</small>
+                    </div>
+                    <button type="submit" class="btn-primary" style="margin-top:16px;">➕ إضافة الدواء والتذكيرات</button>
+                    <div style="margin-top: 10px; color: var(--accent-emerald); font-size: 0.85rem;" id="auto-scheduler-status">⏳ جاري التحقق من المواعيد باستمرار...</div>
+                </form>
+
+                <div class="table-container">
+                    <h3>🩺 أدويتي الحالية (Medications)</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>اسم الدواء</th>
+                                <th>الجرعة</th>
+                                <th>اختبار التذكير</th>
+                                <th>إلغاء</th>
+                            </tr>
+                        </thead>
+                        <tbody id="medications-tbody">
+                            <tr><td colspan="4" style="text-align:center;">جاري تحميل الأدوية...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- NEW: Chatbot & Records Grid -->
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-top:20px;">
+                    <!-- Medical Records Upload -->
+                    <div class="section-card" style="background:#1e293b; border:1px solid #334155; padding:16px; border-radius:12px;">
+                        <h3 style="color:var(--accent-blue); margin-bottom:12px;">📄 رفع سجل طبي / أشعة (Upload Records)</h3>
+                        <form id="upload-record-form">
+                            <input type="file" id="medical-file" style="margin-bottom:10px; width:100%; color:#fff;" required>
+                            <button type="submit" class="btn-primary" style="width:100%;">رفع الملف للسيرفر 📤</button>
+                        </form>
+                    </div>
+
+                    <!-- AI Chatbot -->
+                    <div class="section-card" style="background:#1e293b; border:1px solid #334155; padding:16px; border-radius:12px;">
+                        <h3 style="color:#ec4899; margin-bottom:12px;">🤖 اسأل المساعد الطبي (AI Chatbot)</h3>
+                        <form id="chatbot-form">
+                            <input type="text" id="chat-query" placeholder="مثال: متى يجب أخذ أدوية الضغط؟" required style="width:100%; margin-bottom:10px; padding:8px; border-radius:6px; border:1px solid #475569; background:#0f172a; color:#fff;">
+                            <button type="submit" class="btn-secondary" style="width:100%;">إرسال السؤال 💬</button>
+                        </form>
+                        <div id="chatbot-response" style="margin-top:10px; color:var(--accent-emerald); font-size:0.9rem;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= DOCTOR WORKSPACE ================= -->
+        <div id="doctor-tab" class="tab-content">
+            <!-- Stats Bar -->
+            <div class="stats-row">
+                <div class="stat-card"><div class="stat-number" id="total-patients">0</div><div class="stat-label">إجمالي حجوزات اليوم</div></div>
+                <div class="stat-card"><div class="stat-number" id="waiting-patients">0</div><div class="stat-label">في الانتظار ⏳</div></div>
+                <div class="stat-card"><div class="stat-number" id="completed-patients">0</div><div class="stat-label">تم الكشف ✅</div></div>
+                <div class="stat-card"><div class="stat-number" id="current-patient-queue">--</div><div class="stat-label">الدور الحالي 🩺</div></div>
+            </div>
+
+            <!-- ACTIVE PATIENT IN CLINIC CARD (AUTOMATIC TRACKING) -->
+            <div class="section-card" style="border: 2px solid var(--accent-blue); background: rgba(56, 189, 248, 0.06);">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+                    <h2>🩺 المريض الحالي داخل العيادة الآن</h2>
+                    <span class="status-badge waiting" id="active-patient-badge">جاري الكشف</span>
+                </div>
+
+                <div id="active-patient-box">
+                    <p style="text-align:center; color:var(--text-muted); padding:20px;">جاري تتبع المريض الحالي في العيادة...</p>
+                </div>
+            </div>
+
+            <!-- PATIENTS LIST & QUEUE TABLE -->
+            <div class="section-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:16px;">
+                    <h2>📊 جدول دور المرضى لليوم</h2>
+                    <button class="btn-secondary" onclick="refreshDoctorDashboard()">🔄 تحديث القائمة</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الدور</th><th>اسم المريض</th><th>رقم الهاتف</th><th>الميعاد المتوقع</th><th>الحالة</th><th>الإجراء</th>
+                            </tr>
+                        </thead>
+                        <tbody id="patients-tbody">
+                            <tr><td colspan="6" class="no-data">جاري تحميل البيانات...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ADMIN WORKSPACE ================= -->
+        <div id="admin-tab" class="tab-content workspace">
+            <h2 style="color: var(--accent-emerald);">إدارة نظام المستشفى وصلاحيات الدخول</h2>
+            <div style="display:flex; gap:10px; margin-bottom:20px;">
+                <button class="btn-primary" onclick="fetchAdminUsers()">عرض كل المستخدمين والممرضين</button>
+                <button class="btn-secondary" onclick="fetchAuditLogs()">عرض سجلات النشاط (Audit Logs) 🔍</button>
+                <button class="btn-danger" style="margin-right:auto;" onclick="clearAllData()">مسح الجلسات/حجوزات اليوم بالكامل 🗑️</button>
+            </div>
+            
+            <div id="admin-results-container" class="table-container" style="display:none;">
+                <table class="data-table">
+                    <thead id="admin-table-head"></thead>
+                    <tbody id="admin-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= API EXPLORER WORKSPACE ================= -->
+        <div id="api-tab" class="tab-content workspace">
+            <h2 style="color: var(--accent-slate);">📖 دليل استعلامات النظام الشامل (API endpoints)</h2>
+            <p style="color: var(--text-muted); margin-bottom:20px;">
+                هذه الصفحة توضح لك كل الـ Endpoints الموجودة في سيرفر المستشفى، من يستخدمها، وما هي وظيفتها، مع إمكانية استدعائها لاختبار السيرفر مباشرة.
+            </p>
+
+            <div class="api-endpoints-container" style="display:grid; grid-template-columns: 1fr; gap:16px;">
+                <!-- 1. Authentication -->
+                <div class="doctor-card" style="cursor:default;">
+                    <h3 style="color:var(--accent-emerald);">1. المصادقة والحسابات (Auth)</h3>
+                    <ul>
+                        <li><strong>POST /api/auth/login</strong> <span class="role-badge patient">الكل</span> - لتسجيل دخول المريض، الطبيب، أو مدير النظام. ترجع JWT Token للمصادقة.</li>
+                        <li><strong>POST /api/auth/register</strong> <span class="role-badge patient">الكل</span> - لإنشاء حساب مريض أو طبيب جديد في قاعدة البيانات.</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Appointments / Queue -->
+                <div class="doctor-card" style="cursor:default;">
+                    <h3 style="color:var(--accent-blue);">2. الحجوزات ونظام الطابور (Appointments)</h3>
+                    <ul>
+                        <li><strong>GET /api/doctors</strong> <span class="role-badge patient">مريض</span> - لاستعراض قائمة الأطباء المتاحين للحجز.</li>
+                        <li><strong>POST /api/book</strong> <span class="role-badge patient">مريض</span> - حجز موعد جديد والحصول على رقم في طابور العيادة (Queue Number).</li>
+                        <li><strong>GET /api/patients</strong> <span class="role-badge doctor">طبيب</span> <span class="role-badge admin">أدمن</span> - عرض قائمة المرضى الحاليين الموجودين في طابور العيادة وحالتهم.</li>
+                        <li><strong>GET /api/stats</strong> <span class="role-badge doctor">طبيب</span> <span class="role-badge admin">أدمن</span> - جلب إحصائيات العيادة لليوم (كم مريض كشف، كم بالانتظار).</li>
+                        <li><strong>PUT /api/patient/{id}/done</strong> <span class="role-badge doctor">طبيب</span> - يضغط عليه الطبيب لتسجيل خروج المريض الحالي وإنهاء الكشف بنجاح.</li>
+                        <li><strong>DELETE /api/patients</strong> <span class="role-badge admin">أدمن</span> - لمسح كل حجوزات اليوم (Reset الطابور).</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Medications -->
+                <div class="doctor-card" style="cursor:default;">
+                    <h3 style="color:#f59e0b;">3. الأدوية والروشتات (Medications)</h3>
+                    <ul>
+                        <li><strong>POST /api/medications/</strong> <span class="role-badge patient">مريض</span> <span class="role-badge doctor">طبيب</span> - إضافة دواء جديد لروشتة المريض.</li>
+                        <li><strong>GET /api/medications/</strong> <span class="role-badge patient">مريض</span> - لعرض الأدوية الخاصة بالمريض الحالي.</li>
+                        <li><strong>POST /api/medications/{id}/reminders</strong> <span class="role-badge patient">مريض</span> - لربط مواعيد تذكير مختلفة لكل دواء.</li>
+                        <li><strong>DELETE /api/medications/{id}</strong> <span class="role-badge patient">مريض</span> - لحذف الدواء من قائمة المريض.</li>
+                        <li><strong>PUT /api/medications/{id}</strong> <span class="role-badge patient">مريض</span> <span class="role-badge doctor">طبيب</span> - لتعديل جرعات الدواء واسمه.</li>
+                    </ul>
+                </div>
+
+                <!-- 4. Telegram Integration -->
+                <div class="doctor-card" style="cursor:default;">
+                    <h3 style="color:#0ea5e9;">4. تليجرام للإشعارات (Telegram)</h3>
+                    <ul>
+                        <li><strong>POST /api/telegram/send-reminder</strong> <span class="role-badge admin">نظام</span> - لاستدعاء تليجرام بوت وإرسال رسالة تذكير للمريض وقت وصول وقت دوائه.</li>
+                        <li><strong>POST /api/telegram/webhook</strong> <span class="role-badge admin">نظام</span> - لاستقبال الرسائل من البوت والرد عليها.</li>
+                    </ul>
+                </div>
+
+                <!-- 5. Files / Medical Records / Notes -->
+                <div class="doctor-card" style="cursor:default;">
+                    <h3 style="color:#8b5cf6;">5. السجلات والملاحظات السرية (Records & Notes)</h3>
+                    <ul>
+                        <li><strong>GET /api/medical-records/{patient_id}</strong> <span class="role-badge doctor">طبيب</span> - لقراءة السجل الطبي الكامل للمريض.</li>
+                        <li><strong>POST /api/patient_notes/</strong> <span class="role-badge doctor">طبيب</span> - لكتابة الملاحظات السرية للطبيب عن حالة المريض.</li>
+                        <li><strong>POST /api/files/upload</strong> <span class="role-badge doctor">طبيب</span> <span class="role-badge patient">مريض</span> - لرفع التحاليل والأشعة الطبية.</li>
+                    </ul>
+                </div>
+
+                <!-- 6. AI Chatbot -->
+                <div class="doctor-card" style="cursor:default;">
+                    <h3 style="color:#ec4899;">6. مساعد الذكاء الاصطناعي (Chatbot)</h3>
+                    <ul>
+                        <li><strong>POST /api/chatbot/query</strong> <span class="role-badge patient">مريض</span> - لطرح أسئلة طبية أولية للروبوت وتلقي استشارات.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- API Live Response Log Box -->
+        <div class="section-card" style="background:#020617; border-color:rgba(56,189,248,0.3); margin-top:24px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <h3 style="color:var(--accent-blue); font-size:0.95rem;">📡 سجل استجابة الخادم الآلي (Live API Monitor)</h3>
+                <small style="color:var(--text-muted);">يقوم بتتبع كافة العمليات والاستجابات تلقائياً</small>
+            </div>
+            <pre id="api-log-box" style="direction:ltr; text-align:left; background:#0f172a; padding:14px; border-radius:10px; color:#38bdf8; font-family:monospace; font-size:0.85rem; max-height:160px; overflow-y:auto;">System initialized. Waiting for user actions...</pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
