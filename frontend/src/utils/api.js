@@ -2,7 +2,13 @@
  * api.js — كل طلبات الـ backend في مكان واحد.
  * Vite proxy بيحوّل /api/* → localhost:5000
  */
-const BASE = import.meta.env?.VITE_API_URL || import.meta.env?.NEXT_PUBLIC_API_URL || '/api';
+const getBaseUrl = () => {
+  let envUrl = import.meta.env?.VITE_API_URL || import.meta.env?.NEXT_PUBLIC_API_URL || '';
+  if (!envUrl) return '/api';
+  envUrl = envUrl.replace(/\/+$/, ''); // remove trailing slashes
+  return envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`;
+};
+const BASE = getBaseUrl();
 
 async function request(method, path, body = null) {
   const token = localStorage.getItem('token');
