@@ -22,5 +22,6 @@ COLLECTION_NAME = os.getenv("CHROMA_COLLECTION", "medical_records")
 # عدد النتائج من البحث
 TOP_K = int(os.getenv("RAG_TOP_K", "5"))
 
-# موديل الـ embedding (BGE)
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
+# موديل الـ embedding (خفيف جداً لسيرفرات الـ 512MB RAM)
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+

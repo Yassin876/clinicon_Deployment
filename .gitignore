@@ -27,14 +27,15 @@ yarn-debug.log*
 yarn-error.log*
 
 # ===== Databases & Storage =====
+# ===== Databases & Storage =====
 *.db
 *.sqlite
 *.sqlite3
 hospital.db
 hospital/hospital/clinic-backend/hospital.db
-rag/database/chroma_db/
-rag/chroma_db/
-chroma_db/
+!rag/database/
+!rag/database/**
+
 
 # ===== Uploaded Patient Files =====
 hospital/hospital/clinic-backend/uploads/
@@ -67,4 +68,4 @@ frontend/build/
 *.log
 /tmp/
 # ===== RAG Database =====
-rag/database/
+# rag/database/ is tracked so Railway can use the prebuilt ChromaDB
