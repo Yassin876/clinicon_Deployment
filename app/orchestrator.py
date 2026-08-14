@@ -140,7 +140,11 @@ def _parse_raw_function_call(text: str):
 
 def create_agent(patient_token: Optional[str] = None):
     if config.USE_GEMINI:
-        from langchain_google_genai import ChatGoogleGenerativeAI
+        try:
+            from langchain_google_genai import ChatGoogleGenerativeAI
+        except ImportError:
+            # Fallback to langchain_community or direct google.genai if unavailable
+            from langchain_community.chat_models import ChatGoogleGenerativeAI
         import os
         api_key = config.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
         print(f"  [agent] Using Gemini Model ({config.GEMINI_MODEL})")
