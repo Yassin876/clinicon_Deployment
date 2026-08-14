@@ -140,21 +140,36 @@ def _parse_raw_function_call(text: str):
 
 def create_agent(patient_token: Optional[str] = None):
     if config.USE_GEMINI:
-        try:
-            from langchain_google_genai import ChatGoogleGenerativeAI
-        except ImportError:
-            # Fallback to langchain_community or direct google.genai if unavailable
-            from langchain_community.chat_models import ChatGoogleGenerativeAI
         import os
         api_key = config.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
         print(f"  [agent] Using Gemini Model ({config.GEMINI_MODEL})")
-        llm = ChatGoogleGenerativeAI(
-            model=config.GEMINI_MODEL,
-            google_api_key=api_key if api_key else None,
-            temperature=config.TEMPERATURE,
-            transport="rest",
-            timeout=120,
-        )
+        
+        try:
+            from langchain_google_genai import ChatGoogleGenerativeAI
+            llm = ChatGoogleGenerativeAI(
+                model=config.GEMINI_MODEL,
+                google_api_key=api_key if api_key else None,
+                temperature=config.TEMPERATURE,
+                transport="rest",
+                timeout=120,
+            )
+        except Exception as e:
+            print(f"  [agent] Warning: langchain_google_genai failed ({e}), using google-genai direct wrapper...")
+            from google import genai
+            client = genai.Client(api_key=api_key)
+            class DirectGeminiWrapper:
+                def __init__(self, client, model):
+                    self.client = client
+                    self.model = model
+                def invoke(self, messages):
+                    # convert messages to prompt string
+                    prompt = "\n".join([f"{m.type}: {m.content}" for m in messages])
+                    response = self.client.models.generate_content(
+                        model=self.model,
+                        contents=prompt,
+                    )
+                    return AIMessage(content=response.text or "")
+            llm = DirectGeminiWrapper(client, config.GEMINI_MODEL)
     else:
         print(f"  [agent] Using Ollama Model ({config.OLLAMA_MODEL})")
         llm = ChatOllama(
