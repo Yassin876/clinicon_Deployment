@@ -4,10 +4,11 @@ langchain-ollama
 requests
 python-dotenv
 
-# RAG
+# RAG & Gemini
 chromadb
 sentence-transformers
 google-genai
+langchain-google-genai
 
 # Local model loading (Qwen 4-bit NF4 + BGE FP16)
 transformers>=4.41.0
