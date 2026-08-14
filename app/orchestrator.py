@@ -34,8 +34,13 @@ _TOOL_ALIASES = {
 }
 
 
-def _strip_think(text: str) -> str:
+def _strip_think(text) -> str:
     """Qwen3 بيكتب تفكيره جوه <think>...</think> — بنشيله."""
+    if isinstance(text, list):
+        # Extract text from list of content blocks (e.g. Gemini / LangChain standard)
+        text = "".join([str(item.get("text", item) if isinstance(item, dict) else item) for item in text])
+    elif not isinstance(text, str):
+        text = str(text) if text is not None else ""
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
     return text.strip()
 
