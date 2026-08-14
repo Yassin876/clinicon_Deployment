@@ -74,7 +74,13 @@ export default function Chat() {
         body.user_email = user.email || '';
         sentContext.current = true;
       }
-      const res = await fetch('/agent/chat', {
+      const getAgentUrl = () => {
+        let envUrl = import.meta.env?.VITE_AGENT_URL || import.meta.env?.NEXT_PUBLIC_AGENT_URL || '';
+        if (!envUrl) return '/agent';
+        return envUrl.replace(/\/+$/, '');
+      };
+      const agentBase = getAgentUrl();
+      const res = await fetch(`${agentBase}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
