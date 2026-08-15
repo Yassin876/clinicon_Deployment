@@ -9,10 +9,15 @@ from app.core import security
 
 
 def _resolve_pending_clinic(db: Session, details: UserCreate):
-    if details.role not in {UserRole.doctor, UserRole.lab}:
+    if details.role not in {UserRole.doctor, UserRole.lab, UserRole.patient}:
         return None
 
     if not details.clinic_email:
+        if details.role == UserRole.patient:
+            raise HTTPException(
+                status_code=400,
+                detail="يجب إدخال البريد الإلكتروني للعيادة المسجل بها المريض"
+            )
         return None
 
     from app.models.clinic import Clinic
@@ -55,7 +60,8 @@ class AuthService:
         # Atomic transaction context
         try:
             pending_clinic = _resolve_pending_clinic(db, details) if force_active is not True else None
-            is_active_initial = True if force_active is True else (False if pending_clinic else True)
+            # Patients are active immediately but linked to the clinic via pending_clinic
+            is_active_initial = True if force_active is True else (False if (pending_clinic and details.role != UserRole.patient) else True)
 
             # Create User
             user = User(
@@ -65,7 +71,7 @@ class AuthService:
                 phone_number=details.phone_number,
                 role=details.role,
                 is_active=is_active_initial,
-                pending_clinic_id=pending_clinic.id if pending_clinic else None
+                pending_clinic_id=pending_clinic.id if (pending_clinic and details.role != UserRole.patient) else None
             )
             db.add(user)
             db.flush()  # Extract created user ID
@@ -74,6 +80,7 @@ class AuthService:
             if details.role == UserRole.patient:
                 patient = Patient(
                     user_id=user.id,
+                    clinic_id=pending_clinic.id if pending_clinic else None,
                     date_of_birth=details.date_of_birth,
                     gender=details.gender,
                     address=details.address,

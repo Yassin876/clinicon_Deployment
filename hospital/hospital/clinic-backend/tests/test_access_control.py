@@ -112,13 +112,44 @@ def test_booking_response_includes_selected_doctor_id(db):
     doctor = Doctor(user_id=doctor_user.id, specialization="قلب")
     db.add(doctor)
     db.flush()
+
     clinic.doctors.append(doctor)
+    db.flush()
+
+    from app.models.doctor import DoctorAvailability
+    from datetime import timedelta
+    tomorrow = datetime.utcnow() + timedelta(days=1)
+    slot_dt = datetime(tomorrow.year, tomorrow.month, tomorrow.day, 10, 0, 0)
+    availability = DoctorAvailability(
+        doctor_id=doctor.id,
+        day_of_week=slot_dt.weekday(),
+        start_time=datetime.min.time(),
+        end_time=datetime.max.time(),
+        is_active=True
+    )
+    db.add(availability)
+    db.commit()
+
+    patient_user = User(
+        full_name="مريض جديد",
+        email="patient_test@example.com",
+        password_hash="hash",
+        phone_number="01012345678",
+        role=UserRole.patient,
+        is_active=True,
+    )
+    db.add(patient_user)
+    db.flush()
+
+    patient = Patient(user_id=patient_user.id, clinic_id=clinic.id)
+    db.add(patient)
     db.commit()
 
     response = asyncio.run(
         book_appointment(
-            BookingRequest(name="مريض جديد", phone="01012345678", doctor_id=str(doctor.id)),
+            BookingRequest(patient_name="مريض جديد", patient_phone="01012345678", doctor_id=str(doctor.id), slot_datetime=slot_dt),
             db=db,
+            current_user=patient_user
         )
     )
 
@@ -193,7 +224,6 @@ def test_clinic_owner_queue_only_shows_appointments_for_own_clinic(db):
         patient_id=patient.id,
         doctor_id=doctor.id,
         appointment_date=datetime.utcnow(),
-        queue_number=1,
         status=AppointmentStatus.pending,
     )
     db.add(appointment)
@@ -218,7 +248,6 @@ def test_clinic_owner_queue_only_shows_appointments_for_own_clinic(db):
         patient_id=other_patient.id,
         doctor_id=other_doctor.id,
         appointment_date=datetime.utcnow(),
-        queue_number=2,
         status=AppointmentStatus.pending,
     )
     db.add(other_appointment)

@@ -25,9 +25,22 @@ class BookingRequest(BaseModel):
 
 
 @router.get('/doctors')
-async def list_doctors(db: Session = Depends(get_db)):
-    """قائمة الأطباء المتاحين مع أسمائهم وتخصصاتهم — بدون تسجيل دخول"""
-    doctors = db.query(Doctor).join(User, Doctor.user_id == User.id).filter(User.is_active == True).all()
+async def list_doctors(
+    db: Session = Depends(get_db),
+    current_user: User | None = Depends(get_current_user)
+):
+    """قائمة الأطباء المتاحين مع أسمائهم وتخصصاتهم — مقتصرة على أطباء العيادة للمريض المسجل"""
+    query = db.query(Doctor).join(User, Doctor.user_id == User.id).filter(User.is_active == True)
+
+    if current_user and current_user.role == UserRole.patient:
+        patient = db.query(Patient).filter(Patient.user_id == current_user.id).first()
+        if patient and patient.clinic_id:
+            query = query.filter(Doctor.clinic_id == patient.clinic_id)
+        else:
+            # If patient is not linked to any clinic, return empty list
+            return {'success': True, 'data': []}
+
+    doctors = query.all()
     return {
         'success': True,
         'data': [

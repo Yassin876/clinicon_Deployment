@@ -26,6 +26,8 @@ class Patient(Base):
     updated_at = Column(DateTime(timezone=True), default=datetime.utcnow, onupdate=datetime.utcnow)
 
     # Relationships
+    clinic_id = Column(Uuid(as_uuid=True), ForeignKey('clinics.id', ondelete='SET NULL'), nullable=True)
+    clinic = relationship("Clinic")
     user = relationship("User", back_populates="patient_profile")
     appointments = relationship("Appointment", back_populates="patient", cascade="all, delete-orphan")
     allergies = relationship("Allergy", back_populates="patient", cascade="all, delete-orphan")
