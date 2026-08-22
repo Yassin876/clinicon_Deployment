@@ -155,7 +155,6 @@ def create_agent(patient_token: Optional[str] = None):
                 model=config.GEMINI_MODEL,
                 google_api_key=api_key if api_key else None,
                 temperature=config.TEMPERATURE,
-                transport="rest",
                 timeout=120,
             )
         except Exception as e:
